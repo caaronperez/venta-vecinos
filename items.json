@@ -541,9 +541,9 @@
  {
   "code": "MV-62",
   "title": "Zapatera blanca con madera, 3 puertas y cajón",
-  "price": 1160,
+  "price": 1100,
   "originalPrice": 1741,
-  "cashPrice": 1160,
+  "cashPrice": 1100,
   "delivery": 0,
   "category": "Muebles",
   "condition": "Buen estado",
@@ -555,7 +555,7 @@
   ],
   "status": "oferta",
   "links": {
-   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-47c17a47-7a6d-4193-8cf8-c87936032922"
+   "bbva": "https://api.openpay.mx/v1/ms1yc7i9o9skh4el5fq6/customers/ahy3v3rwnxqf7c1cedmo/checkouts/ck490j1x8wipjf1nzbkl"
   },
   "en": {
    "title": "White and wood shoe cabinet, 3 doors and drawer",

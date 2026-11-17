@@ -137,6 +137,8 @@ svg.i { width: 26px; height: 26px; flex: none; fill: none; stroke: currentColor;
 .btn.mp { background: #fff; border-color: var(--mp-navy); color: var(--mp-navy); }
 .btn.mp.alt { border-color: #CFC8B8; }
 .btn .mplogo { height: 40px; width: auto; display: inline-block; vertical-align: middle; margin: -12px -2px; }
+.btn.bbva { background: #fff; border-color: #004481; color: #004481; }
+.btn .bbvalogo { height: 15px; width: auto; display: inline-block; vertical-align: middle; margin: 0 1px; }
 .btn.wa { background: var(--wa); color: var(--ink); }
 .plan { display: grid; gap: 10px; }
 .btn.off, details.plan.off { opacity: .45; filter: grayscale(1); pointer-events: none; cursor: default; }
@@ -363,7 +365,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
         <button class="close" type="button" id="m-close" aria-label="Cerrar" data-t-al="close"><svg class="i"><use href="#i-x"/></svg></button>
       </div>
       <h2 id="m-title"></h2>
-      <div class="bigprice"><b id="m-price"></b><span data-t="withMp">MXN · con Mercado Pago</span></div>
+      <div class="bigprice"><b id="m-price"></b><span id="m-withpay" data-t="withMp">MXN · con Mercado Pago</span></div>
       <div id="m-was" hidden></div>
       <div id="m-orig"></div>
       <div class="msi-box" id="m-msi"></div>
@@ -372,7 +374,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       <p class="desc" id="m-desc"></p>
       <div class="actions" id="m-actions"></div>
       <button class="share" type="button" id="m-share" data-t="copy">Copiar enlace</button>
-      <p class="fine" data-t="fine">Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.</p>
+      <p class="fine" id="m-fine" data-t="fine">Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.</p>
     </div>
   </div>
 </dialog>
@@ -414,7 +416,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       s2h: "Paga o haz una oferta", s2p: "Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia), en efectivo al recoger, o mándame tu oferta por WhatsApp.",
       s3h: "Recoge", s3p: "Recoge en {pickup}. Coordinamos día y hora por WhatsApp.",
       secure: "Pagos seguros con", footPrices: "Precios en pesos mexicanos (MXN). El precio en efectivo es solo para recoger en persona.", footWa: "Contacto por WhatsApp",
-      close: "Cerrar", withMp: "MXN · con Mercado Pago", copy: "Copiar enlace", copied: "Enlace copiado ✓",
+      close: "Cerrar", withMp: "MXN · con Mercado Pago", withBbva: "MXN · con BBVA", fineBbva: "Paga con BBVA y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.", copy: "Copiar enlace", copied: "Enlace copiado ✓",
       fine: "Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.",
       daysLeft: "Hasta el 25 de noviembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
       waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
@@ -445,7 +447,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       s2h: "Pay or make an offer", s2p: "Pay with Mercado Pago (card in up to 3 interest-free installments, OXXO or bank transfer), in cash with a discount at pickup, or send me your offer on WhatsApp.",
       s3h: "Pick up or get it delivered", s3p: "Pick up at {pickup}. For delivery, you book the Lalamove, Uber Flash or DiDi Entrega and pay the driver directly. We arrange it on WhatsApp.",
       secure: "Secure payments with", footPrices: "Prices in Mexican pesos (MXN). The cash price is for in-person pickup only.", footWa: "Contact on WhatsApp",
-      close: "Close", withMp: "MXN · with Mercado Pago", copy: "Copy link", copied: "Link copied ✓",
+      close: "Close", withMp: "MXN · with Mercado Pago", withBbva: "MXN · with BBVA", fineBbva: "Pay with BBVA and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.", copy: "Copy link", copied: "Link copied ✓",
       fine: "Pay with Mercado Pago and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.",
       daysLeft: "Until November 25 · {n} days left", lastDay: "Last day", lastItems: "Last items",
       waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
@@ -548,6 +550,12 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       h("span", { class: "amt", text: amt })
     ]);
   }
+  function bbvaBtn(after, amt, href) {
+    return h("a", { class: "btn bbva", href: href, target: "_blank", rel: "noopener" }, [
+      h("span", null, [t("payWith"), h("img", { class: "bbvalogo", src: ROOT + "brand/bbva.svg", alt: "BBVA" }), " " + after]),
+      h("span", { class: "amt", text: amt })
+    ]);
+  }
   function waBtn(label, href) {
     return h("a", { class: "btn wa", href: href, target: "_blank", rel: "noopener" }, [h("img", { class: "walogo", src: ROOT + "brand/whatsapp-glyph-white.svg", alt: "" }), h("span", { text: label })]);
   }
@@ -597,11 +605,12 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     grid.replaceChildren();
     list.forEach(function (it) {
       var sold = it.status === "vendido", held = isHeld(it) || it.status === "oferta";
+      var useBbva = safeUrl((it.links || {}).bbva) && !safeUrl((it.links || {}).pickup);
       var pic = (it.photos || []).map(safePhoto).filter(Boolean)[0];
       var ph = h("div", { class: "ph" }, [
         pic ? h("img", { src: pic, alt: tr(it, "title"), loading: "lazy" }) : h("div", { class: "noimg", text: t("soon") }),
         sold ? h("span", { class: "badge sold", text: t("sold") }) : held ? h("span", { class: "badge", text: heldLabel(it) }) : wasLine(it) ? h("span", { class: "badge deal", text: t("deal") }) : null,
-        sold ? null : h("span", { class: "msi-tag", text: t("msiTag") })
+        sold || useBbva ? null : h("span", { class: "msi-tag", text: t("msiTag") })
       ]);
       var meta = h("div", { class: "meta" }, [
         h("span", { class: "code", text: it.code }),
@@ -610,7 +619,9 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
         wasLine(it),
         (function () {
           var pl = planOf(it);
-          if (sold || !pl.length) return h("div", { class: "sub", text: sold ? t("sold") : t("orMsi", { amt: money(it.price / 3) }) });
+          if (sold) return h("div", { class: "sub", text: t("sold") });
+          if (useBbva) return null;
+          if (!pl.length) return h("div", { class: "sub", text: t("orMsi", { amt: money(it.price / 3) }) });
           var st = planLeft(pl);
           return h("div", { class: "left", text: st.left === 0 ? t("allPaid") : st.left === 1 ? t("cardLeft1") : t("cardLeft", { left: st.left }) });
         })(),
@@ -716,16 +727,19 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     if (!it) return;
     current = it;
     var sold = it.status === "vendido", held = isHeld(it), offer = !sold && it.status === "oferta";
+    var useBbva = safeUrl((it.links || {}).bbva) && !safeUrl((it.links || {}).pickup);
     document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held || offer ? " · " + heldLabel(it) : "");
     document.getElementById("m-title").textContent = tr(it, "title");
     document.getElementById("m-price").textContent = money(it.price);
+    document.getElementById("m-withpay").textContent = useBbva ? t("withBbva") : t("withMp");
+    document.getElementById("m-fine").textContent = useBbva ? t("fineBbva") : t("fine");
     var mw = document.getElementById("m-was"), wl = wasLine(it);
     mw.replaceChildren(); if (wl) mw.appendChild(wl); mw.hidden = !wl;
     var mo = document.getElementById("m-orig"), ol = origLine(it);
     mo.replaceChildren(); if (ol) mo.appendChild(ol); mo.hidden = !ol;
     var msi = document.getElementById("m-msi");
     msi.replaceChildren(icon("i-card"), h("span", null, [t("msiBox"), h("b", { text: "3 × " + money(it.price / 3) })]));
-    msi.hidden = sold || Number(it.price) > 300000;
+    msi.hidden = sold || useBbva || Number(it.price) > 300000;
     var cb = document.getElementById("m-cash");
     cb.replaceChildren(icon("i-cash"), h("span", null, [t("cashBox"), h("b", { text: money(cashPrice(it)) }), h("small", { text: t("cashNote") })]));
     cb.hidden = sold;
@@ -770,9 +784,11 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       // Items with several units (qty) also carry one link that buys all of them (allPrice = qty x unit price).
       if (!plan.length && safeUrl(L.all) && Number(it.qty) > 1 && Number(it.allPrice) > 0) acts.appendChild(mpBtn("alt", t("payAllN", { n: it.qty }), money(it.allPrice), safeUrl(L.all)));
       if (safeUrl(L.delivery) && deliv > 0) acts.appendChild(mpBtn("alt", t("payDeliv"), money(it.price + deliv), safeUrl(L.delivery)));
+      // BBVA (Openpay) pay link — used in place of Mercado Pago for a specific accepted offer; stays active even when offer locks MP.
+      if (safeUrl(L.bbva)) acts.appendChild(bbvaBtn(t("payPickup"), money(it.price), safeUrl(L.bbva)));
       if (offer && CONFIG.offerLocksPay) {
         acts.querySelectorAll("a.btn.mp, details.plan").forEach(lockBtn);
-        acts.prepend(h("p", { class: "locknote", text: t("offerNote") }));
+        if (!safeUrl(L.bbva)) acts.prepend(h("p", { class: "locknote", text: t("offerNote") }));
       }
     }
     var msg = sold ? t("waSold", { code: it.code, title: tr(it, "title") }) : t("waOffer", { code: it.code, title: tr(it, "title"), price: money(it.price) });
