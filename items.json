@@ -146,6 +146,32 @@
   }
  },
  {
+  "code": "MV-36",
+  "title": "Lavavajillas Frigidaire 24\" acero inoxidable",
+  "price": 1570,
+  "originalPrice": 3500,
+  "cashPrice": 1500,
+  "delivery": 0,
+  "category": "Electrodomésticos",
+  "condition": "Buen estado",
+  "size": "24\" (60 x 60 x 86 cm)",
+  "brand": "Frigidaire",
+  "description": "Lavavajillas Frigidaire empotrable de 24 pulgadas con puerta de acero inoxidable y panel de control negro. Funciona bien. El comprador se encarga de desinstalarlo y conectarlo.",
+  "photos": [
+   "images/mv-36-1.jpg",
+   "images/mv-36-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-bef6ba7f-c7c8-45fe-a268-00d219e4c173"
+  },
+  "en": {
+   "title": "Frigidaire 24\" stainless steel dishwasher",
+   "description": "Built-in 24-inch Frigidaire dishwasher with stainless steel door and black control panel. Works well. The buyer handles uninstalling and hooking it up.",
+   "size": "24\" (60 x 60 x 86 cm)"
+  }
+ },
+ {
   "code": "MV-76",
   "title": "Cactus órgano 1.4 m con maceta de cemento blanca",
   "price": 1050,
