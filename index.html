@@ -185,7 +185,14 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
 .m { display: grid; grid-template-columns: 1.15fr 1fr; max-height: calc(100dvh - 24px); }
 .gallery { display: grid; grid-template-rows: 1fr auto; border-right: 1px solid var(--line); position: relative; min-height: 0; }
 .gallery .main { position: relative; overflow: hidden; background: var(--sage); min-height: 360px; }
-.gallery .main img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.gallery .main img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; cursor: zoom-in; }
+.gallery .zhint { position: absolute; right: 12px; bottom: 12px; z-index: 1; border: none; border-radius: 999px; padding: 6px 12px; font: 600 13px/1.2 inherit; font-family: inherit; background: rgba(255,255,255,.92); color: var(--ink); cursor: zoom-in; box-shadow: 0 4px 14px -6px rgba(0,0,0,.4); }
+/* Full-screen photo viewer: whole photo, pinch / wheel / double-tap to zoom, drag to pan */
+.zoom { position: fixed; inset: 0; z-index: 10; background: rgba(10,14,12,.96); display: grid; place-items: center; overflow: hidden; touch-action: none; cursor: zoom-in; }
+.zoom[hidden] { display: none; }
+.zoom.on { cursor: grab; }
+.zoom img { max-width: 100vw; max-height: 100dvh; object-fit: contain; transform-origin: center; user-select: none; -webkit-user-drag: none; will-change: transform; }
+.zoom .zclose { position: absolute; top: 14px; right: 14px; z-index: 1; }
 .gallery .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: none; background: rgba(255,255,255,.95); cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px -6px rgba(0,0,0,.4); z-index: 1; }
 .gallery .nav-btn svg.i { width: 22px; height: 22px; stroke-width: 2.2; }
 .gallery .prev { left: 14px; } .gallery .next { right: 14px; }
@@ -193,7 +200,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
 .thumbs button { flex: none; width: 128px; height: 112px; border-radius: 12px; overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: var(--sage); }
 .thumbs button[aria-current="true"] { border-color: var(--green); }
 .thumbs img { width: 100%; height: 100%; object-fit: cover; }
-.info { padding: 26px 28px 24px; display: grid; gap: 14px; align-content: start; overflow-y: auto; }
+.info { padding: 26px 28px 24px; display: grid; gap: 14px; align-content: start; overflow-y: auto; max-height: calc(100dvh - 24px); }
+.gallery { max-height: calc(100dvh - 24px); }
 .info-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .kicker { font-weight: 700; font-size: 17px; }
 .close { flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--paper); cursor: pointer; display: grid; place-items: center; }
@@ -227,12 +235,18 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
   .gallery { border-right: none; }
   .gallery .main { min-height: 0; height: min(80vw, 48dvh); }
   .thumbs button { width: 76px; height: 64px; }
-  .info { overflow: visible; }
+  .info { overflow: visible; max-height: none; }
+  .gallery { max-height: none; }
   .close.gclose { display: grid; position: absolute; top: 12px; right: 12px; z-index: 2; border: none; background: rgba(255,255,255,.95); }
   .info-top .close { display: none; }
 }
 @media (max-width: 680px) {
   .wrap { padding: 0 16px; }
+  /* keep the header inside a phone screen (it used to widen the page and shift the photo window) */
+  .top .wrap { gap: 12px; }
+  .loc { min-width: 0; font-size: 13px; }
+  .loc #loc { overflow: hidden; text-overflow: ellipsis; }
+  .lang { padding: 4px 10px; font-size: 13px; }
   .brand b { font-size: 26px; }
   .photos { height: 220px; }
   .features { grid-template-columns: 1fr; }
@@ -406,7 +420,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       orMsi: "o 3 × {amt} sin intereses", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
-      photo: "{t} · foto {i} de {n}", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
+      photo: "{t} · foto {i} de {n}", zoom: "Ampliar", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
       msiBox: "Hasta 3 meses sin intereses · ", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, sin envío. Escríbeme por WhatsApp para apartarlo.",
       fCond: "Estado", fSize: "Medidas", fBrand: "Marca", fPickup: "Recoger en", fShip: "Envío", ship: "Por tu cuenta: Lalamove, Uber Flash o DiDi Entrega",
       planH: "Paga con tarjeta en {n} pagos", planP: "Mercado Pago acepta hasta $300,000 por pago con tarjeta. Haz los {n} pagos (suman {total}) y mándame los comprobantes por WhatsApp.", planI: "Pago {i} de {n}",
@@ -437,7 +451,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       orMsi: "or 3 × {amt} interest-free", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
-      photo: "{t} · photo {i} of {n}", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
+      photo: "{t} · photo {i} of {n}", zoom: "Zoom", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
       msiBox: "Up to 3 interest-free installments · ", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, no delivery. Message me on WhatsApp to hold it.",
       fCond: "Condition", fSize: "Size", fBrand: "Brand", fPickup: "Pickup at", fShip: "Delivery", ship: "Your own: Lalamove, Uber Flash or DiDi Entrega",
       planH: "Pay by card in {n} payments", planP: "Mercado Pago accepts up to $300,000 per card payment. Make all {n} payments (they add up to {total}) and send me the receipts on WhatsApp.", planI: "Payment {i} of {n}",
@@ -647,7 +661,9 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     main.replaceChildren(); th.replaceChildren();
     if (!pics.length) { main.appendChild(h("div", { class: "noimg", style: "position:absolute;inset:0", text: t("soon") })); return; }
     idx = (i + pics.length) % pics.length;
-    main.appendChild(h("img", { src: pics[idx], alt: t("photo", { t: tr(current, "title"), i: idx + 1, n: pics.length }) }));
+    var alt = t("photo", { t: tr(current, "title"), i: idx + 1, n: pics.length }), src = pics[idx];
+    main.appendChild(h("img", { src: src, alt: alt, onclick: function () { zOpen(src, alt); } }));
+    main.appendChild(h("button", { class: "zhint", type: "button", text: t("zoom"), onclick: function () { zOpen(src, alt); } }));
     if (pics.length > 1) {
       main.appendChild(h("button", { class: "nav-btn prev", type: "button", "aria-label": t("prev"), onclick: function () { showPhoto(idx - 1); } }, [icon("i-left")]));
       main.appendChild(h("button", { class: "nav-btn next", type: "button", "aria-label": t("next"), onclick: function () { showPhoto(idx + 1); } }, [icon("i-right")]));
@@ -656,6 +672,43 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       });
     }
   }
+  // ---- Photo viewer: shows the whole photo; pinch, mouse wheel or double-tap/click to zoom, drag to pan ----
+  var zoomBox = document.createElement("div"), zImg = document.createElement("img");
+  var zClose = h("button", { class: "close zclose", type: "button", "aria-label": t("close") }, [icon("i-x")]);
+  zoomBox.className = "zoom"; zoomBox.hidden = true; zImg.draggable = false;
+  zoomBox.append(zImg, zClose); modal.appendChild(zoomBox);
+  var zs = 1, zx = 0, zy = 0, pts = new Map(), pinch = null, moved = 0, lastTap = 0;
+  function zApply() { zImg.style.transform = "translate(" + zx + "px," + zy + "px) scale(" + zs + ")"; zoomBox.classList.toggle("on", zs > 1); }
+  function zRel(x, y) { var r = zoomBox.getBoundingClientRect(); return [x - r.left - r.width / 2, y - r.top - r.height / 2]; }
+  function zSet(s, c) { s = Math.max(1, Math.min(5, s)); var k = s / zs; zx = c[0] - (c[0] - zx) * k; zy = c[1] - (c[1] - zy) * k; zs = s; if (zs === 1) zx = zy = 0; zApply(); }
+  function zOpen(src, alt) { zImg.src = src; zImg.alt = alt; zs = 1; zx = zy = 0; zApply(); zoomBox.hidden = false; zClose.focus(); }
+  function zShut() { zoomBox.hidden = true; pts.clear(); pinch = null; }
+  zClose.addEventListener("click", zShut);
+  zoomBox.addEventListener("pointerdown", function (e) {
+    if (zClose.contains(e.target)) return;
+    try { zoomBox.setPointerCapture(e.pointerId); } catch (_) {}
+    pts.set(e.pointerId, [e.clientX, e.clientY]); pinch = null; if (pts.size === 1) moved = 0;
+  });
+  zoomBox.addEventListener("pointermove", function (e) {
+    var prev = pts.get(e.pointerId); if (!prev) return;
+    pts.set(e.pointerId, [e.clientX, e.clientY]); moved += Math.abs(e.clientX - prev[0]) + Math.abs(e.clientY - prev[1]);
+    if (pts.size === 2) {
+      var a = Array.from(pts.values()), d = Math.hypot(a[0][0] - a[1][0], a[0][1] - a[1][1]);
+      if (pinch) zSet(zs * d / pinch, zRel((a[0][0] + a[1][0]) / 2, (a[0][1] + a[1][1]) / 2));
+      pinch = d;
+    } else if (zs > 1) { zx += e.clientX - prev[0]; zy += e.clientY - prev[1]; zApply(); }
+  });
+  function zUp(e) {
+    if (!pts.has(e.pointerId)) return;
+    var single = pts.size === 1; pts.delete(e.pointerId); pinch = null;
+    if (!single || moved > 10 || e.type === "pointercancel") return;
+    var now = Date.now();
+    // Mouse: one click toggles zoom. Touch: double-tap toggles zoom.
+    if (e.pointerType === "mouse" || now - lastTap < 320) { zSet(zs > 1 ? 1 : 2.5, zRel(e.clientX, e.clientY)); lastTap = 0; } else lastTap = now;
+  }
+  zoomBox.addEventListener("pointerup", zUp); zoomBox.addEventListener("pointercancel", zUp);
+  zoomBox.addEventListener("wheel", function (e) { e.preventDefault(); zSet(zs * (e.deltaY < 0 ? 1.15 : 1 / 1.15), zRel(e.clientX, e.clientY)); }, { passive: false });
+  modal.addEventListener("cancel", function (e) { if (!zoomBox.hidden) { e.preventDefault(); zShut(); } });
   function open(code) {
     var it = items.filter(function (x) { return x.code === code; })[0];
     if (!it) return;
@@ -731,7 +784,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     modal.querySelector(".m").scrollTop = 0; modal.querySelector(".info").scrollTop = 0;
   }
   function close() { if (modal.open) modal.close(); }
-  modal.addEventListener("close", function () { current = null; if (location.href !== PAGE) history.replaceState(null, "", PAGE); document.getElementById("lang").href = OTHER; });
+  modal.addEventListener("close", function () { zShut(); current = null; if (location.href !== PAGE) history.replaceState(null, "", PAGE); document.getElementById("lang").href = OTHER; });
   modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   document.getElementById("m-close").addEventListener("click", close);
   document.getElementById("m-close2").addEventListener("click", close);
