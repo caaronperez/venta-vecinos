@@ -79,6 +79,31 @@
   }
  },
  {
+  "code": "MV-15",
+  "title": "Fuente de agua de piedra volcánica con plantas",
+  "price": 580,
+  "originalPrice": 2000,
+  "cashPrice": 580,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "70 x 35 x 50 cm",
+  "brand": "",
+  "description": "Fuente decorativa artesanal de piedra volcánica con cascada en niveles, piedras de río y macetas con plantas. Medidas aprox. 70 x 35 x 50 cm. Incluye bomba eléctrica; funciona perfecto.",
+  "photos": [
+   "images/mv-15-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-a7d915e2-6e05-4696-ab24-44ed52db2462"
+  },
+  "en": {
+   "title": "Volcanic stone water fountain with plants",
+   "description": "Handmade volcanic stone fountain with a tiered waterfall, river stones and planters. About 70 x 35 x 50 cm. Electric pump included; works perfectly.",
+   "size": "70 x 35 x 50 cm"
+  }
+ },
+ {
   "code": "MV-18",
   "title": "Aire portátil Mirage X-One 14,000 BTU frío/calor",
   "price": 4700,
@@ -130,6 +155,59 @@
   }
  },
  {
+  "code": "MV-22",
+  "title": "Docking Targus USB-C Quad 4K DOCK570USZ, 100W",
+  "price": 1570,
+  "originalPrice": 8834,
+  "cashPrice": 1570,
+  "delivery": 0,
+  "category": "Electrónica",
+  "condition": "Buen estado",
+  "size": "21 x 9 x 5 cm",
+  "brand": "Targus",
+  "description": "Estación de acoplamiento Targus DOCK570USZ USB-C Universal Quad 4K (DisplayLink): hasta 4 monitores 4K, carga de laptop de 100 W, puertos USB y Ethernet. Funciona con Mac y Windows. Incluye eliminador y cable USB-C. Hay 2 disponibles. Precio por pieza.",
+  "photos": [
+   "images/mv-22-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-14ce892d-9006-4d74-9b66-b39dc2283312",
+   "all": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-3d887671-0fc7-416f-8b31-695cc573ac07"
+  },
+  "en": {
+   "title": "Targus USB-C Quad 4K dock DOCK570USZ, 100W",
+   "description": "Targus DOCK570USZ USB-C Universal Quad 4K docking station (DisplayLink): up to 4 4K monitors, 100 W laptop charging, USB and Ethernet ports. Works with Mac and Windows. Power adapter and USB-C cable included. 2 available. Price is per piece.",
+   "size": "21 x 9 x 5 cm"
+  },
+  "qty": 2,
+  "allPrice": 3140
+ },
+ {
+  "code": "MV-24",
+  "title": "Rueda de ejercicio para gatos de madera con escalones",
+  "price": 1360,
+  "originalPrice": 0,
+  "cashPrice": 1360,
+  "delivery": 0,
+  "category": "Mascotas",
+  "condition": "Como nuevo",
+  "size": "100 x 35 x 85 cm",
+  "brand": "",
+  "description": "Rueda de ejercicio para gatos de madera con pista alfombrada, escalones y dos comederos. Medidas aprox. 100 x 35 x 85 cm. Casi nueva (comprada en mayo 2026), en excelente estado.",
+  "photos": [
+   "images/mv-24-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-a09349e4-81c2-465b-8b44-9ae5cd17bc9c"
+  },
+  "en": {
+   "title": "Wooden cat exercise wheel with steps",
+   "description": "Wooden cat exercise wheel with carpeted track, steps and two feeders. About 100 x 35 x 85 cm. Almost new (bought May 2026), excellent condition.",
+   "size": "100 x 35 x 85 cm"
+  }
+ },
+ {
   "code": "MV-26",
   "title": "Librero negro con puertas CasaEaster 1.66 m",
   "price": 2300,
@@ -152,6 +230,32 @@
    "title": "CasaEaster black bookcase with doors, 1.66 m",
    "description": "Black CasaEaster 31255B Fiona bookcase/cabinet, 166 cm high x 79 cm wide x 40 cm deep, MDF with metal supports and doors. Good condition. Bought in 2024.",
    "size": "79 x 40 x 166 cm"
+  }
+ },
+ {
+  "code": "MV-33",
+  "title": "Aparador IKEA FJÄLLBO negro con puertas de malla",
+  "price": 3140,
+  "originalPrice": 6999,
+  "cashPrice": 3140,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "111 x 47 x 95 cm",
+  "brand": "IKEA",
+  "description": "Aparador IKEA FJÄLLBO en negro, estructura de acero con puertas de malla y cubierta/repisa de pino macizo, 111 x 47 x 95 cm. En buen estado. Estilo industrial, ideal para sala o comedor.",
+  "photos": [
+   "images/mv-33-1.jpg",
+   "images/mv-33-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-142a7241-aad8-4bda-a30e-4bbcae75bd4b"
+  },
+  "en": {
+   "title": "Black IKEA FJÄLLBO sideboard with mesh doors",
+   "size": "111 x 47 x 95 cm",
+   "description": "Black IKEA FJÄLLBO sideboard: steel frame with mesh doors and a solid pine top/shelf, 111 x 47 x 95 cm. Good condition. Industrial style, great for a living or dining room."
   }
  },
  {
@@ -312,5 +416,134 @@
   },
   "qty": 2,
   "allPrice": 1900
+ },
+ {
+  "code": "MV-80",
+  "title": "Árbol decorativo dorado 1.5 m con jarrón blanco",
+  "price": 60,
+  "originalPrice": 0,
+  "cashPrice": 60,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "1.5 m de alto",
+  "brand": "",
+  "description": "Árbol decorativo tipo topiario con flores secas/preservadas en acabado dorado, aprox. 1.5 m de alto. Incluye jarrón de cerámica blanca brillante con diseño torcido. No requiere cuidados.",
+  "photos": [
+   "images/mv-80-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-5d1bef09-b060-4816-bfd2-665c4cf6e2f9"
+  },
+  "en": {
+   "title": "1.5 m gold decorative tree with white vase",
+   "description": "Topiary-style decorative tree with dried/preserved flowers in a gold finish, about 1.5 m tall. Includes a glossy white twisted ceramic vase. No care needed.",
+   "size": "1.5 m tall"
+  }
+ },
+ {
+  "code": "MV-91",
+  "title": "Bote de basura NINESTARS 50 L acero inox (sensor no funciona)",
+  "price": 220,
+  "originalPrice": 1779,
+  "cashPrice": 220,
+  "delivery": 0,
+  "category": "Hogar",
+  "condition": "Con detalles de uso",
+  "size": "50 L",
+  "brand": "NINESTARS",
+  "description": "Bote de basura NINESTARS de acero inoxidable, aprox. 50 litros, ovalado. El sensor de la tapa NO funciona (se vende para reparar o para usarse abriendo la tapa a mano). Cuerpo en buen estado y limpio.",
+  "photos": [
+   "images/mv-91-1.jpg",
+   "images/mv-91-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-40c61750-4ed9-4b8c-bac1-c308ae7b402a"
+  },
+  "en": {
+   "title": "NINESTARS 50 L stainless trash can (sensor doesn't work)",
+   "size": "50 L",
+   "description": "NINESTARS stainless steel trash can, about 50 liters, oval. The lid sensor does NOT work (sold for repair or to use opening the lid by hand). Body in good shape and clean."
+  }
+ },
+ {
+  "code": "MV-92",
+  "title": "Bote de basura con sensor NINESTARS 50 L, tapa negra",
+  "price": 770,
+  "originalPrice": 1607,
+  "cashPrice": 770,
+  "delivery": 0,
+  "category": "Hogar",
+  "condition": "Buen estado",
+  "size": "50 L",
+  "brand": "NINESTARS",
+  "description": "Bote de basura automático NINESTARS de 50 litros en acero inoxidable con tapa negra; abre solo al acercar la mano. Comprado en diciembre de 2025, funciona bien.",
+  "photos": [
+   "images/mv-92-1.jpg",
+   "images/mv-92-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-6dcf6be8-d1c2-4419-9f82-a37413342eff"
+  },
+  "en": {
+   "title": "NINESTARS 50 L sensor trash can, black lid",
+   "size": "50 L",
+   "description": "NINESTARS 50-liter automatic stainless steel trash can with black lid; opens when you bring your hand close. Bought December 2025, works well."
+  }
+ },
+ {
+  "code": "MV-93",
+  "title": "Cabecera King Size tapizada color arena",
+  "price": 320,
+  "originalPrice": 1799,
+  "cashPrice": 320,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "King Size",
+  "brand": "",
+  "description": "Cabecera tapizada para cama King Size en tela color arena. Usada, en buen estado y sin roturas. La cama de las fotos es matrimonial y no se incluye.",
+  "photos": [
+   "images/mv-93-1.jpg",
+   "images/mv-93-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-34914921-1618-49d6-8631-481d0d0561e7"
+  },
+  "en": {
+   "title": "Sand-colored upholstered King headboard",
+   "size": "King size",
+   "description": "Upholstered King-size headboard in sand-colored fabric. Used, good condition, no tears. The bed in the photos is a full/double and isn't included."
+  }
+ },
+ {
+  "code": "MV-94",
+  "title": "Sábila (aloe vera) grande con maceta decorativa",
+  "price": 170,
+  "originalPrice": 650,
+  "cashPrice": 170,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "55 cm de alto x 75 cm de ancho",
+  "brand": "",
+  "description": "Planta de sábila (aloe vera) natural y grande, aprox. 55 cm de alto y 75 cm de ancho. Incluye maceta decorativa de cerámica texturizada color crema. Muy fácil de cuidar.",
+  "photos": [
+   "images/mv-94-1.jpg",
+   "images/mv-94-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-d1c8d13d-be21-4a04-a965-e8785e6018d5"
+  },
+  "en": {
+   "title": "Large aloe vera plant in a decorative pot",
+   "size": "55 cm tall x 75 cm wide",
+   "description": "Large real aloe vera plant, about 55 cm tall and 75 cm wide. Comes in a cream textured ceramic pot. Very easy to care for."
+  }
  }
 ]
