@@ -138,6 +138,8 @@ svg.i { width: 26px; height: 26px; flex: none; fill: none; stroke: currentColor;
 .btn .mplogo { height: 40px; width: auto; display: inline-block; vertical-align: middle; margin: -12px -2px; }
 .btn.wa { background: var(--wa); color: var(--ink); }
 .plan { display: grid; gap: 10px; }
+.btn.off, details.plan.off { opacity: .45; filter: grayscale(1); pointer-events: none; cursor: default; }
+.locknote { margin: 0 0 4px; font-size: 14px; color: var(--muted, #6b6b6b); }
 .plan > summary { list-style: none; }
 .plan > summary::-webkit-details-marker { display: none; }
 .plan > summary .chev { display: block; width: 20px; height: 20px; stroke-width: 2.2; transform-origin: 50% 50%; transition: transform .2s ease; }
@@ -369,6 +371,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     pickup: "BeGrand Alto Polanco, Torre 4 · Anáhuac I Secc., CP 11320, CDMX",
     pickupShort: "Alto Polanco, CDMX",
     deadline: "2026-11-25T23:59:00-06:00",
+    // Items with an offer in process (status "oferta"): false = pay buttons stay usable, true = shown greyed out.
+    offerLocksPay: true,
     // Cash price = Mercado Pago price minus its commission (3.49% + $4, + IVA), rounded down to $10. Pickup only.
     mpRate: 0.0349, mpFixed: 4, iva: 1.16
   };
@@ -398,7 +402,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       fine: "Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.",
       daysLeft: "Hasta el 25 de noviembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
       waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
-      sold: "Vendido", held: "Apartado", offer: "Oferta en proceso", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
+      sold: "Vendido", held: "Apartado", offer: "Oferta en proceso", offerNote: "Hay una oferta en proceso. Si no se concreta, se vuelve a habilitar el pago.", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
       orMsi: "o 3 × {amt} sin intereses", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
@@ -429,7 +433,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       fine: "Pay with Mercado Pago and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.",
       daysLeft: "Until November 25 · {n} days left", lastDay: "Last day", lastItems: "Last items",
       waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
-      sold: "Sold", held: "On hold", offer: "Offer pending", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
+      sold: "Sold", held: "On hold", offer: "Offer pending", offerNote: "An offer is in progress. If it falls through, payment opens again.", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
       orMsi: "or 3 × {amt} interest-free", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
@@ -495,8 +499,10 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var u = document.createElementNS("http://www.w3.org/2000/svg", "use"); u.setAttribute("href", "#" + id); s.appendChild(u);
     return s;
   }
-  // "apartado" = reserved; "oferta" = an offer is being worked out (not sold yet). Both hide the pay buttons.
-  function isHeld(it) { return it.status === "apartado" || it.status === "oferta"; }
+  // "apartado" = reserved (pay buttons hidden); "oferta" = an offer is being worked out, not sold yet
+  // (badge shown; pay buttons usable unless CONFIG.offerLocksPay, then greyed out).
+  function isHeld(it) { return it.status === "apartado"; }
+  function lockBtn(el) { el.classList.add("off"); el.removeAttribute("href"); el.setAttribute("aria-disabled", "true"); el.tabIndex = -1; }
   function heldLabel(it) { return it.status === "oferta" ? t("offer") : t("held"); }
   function cashPrice(it) {
     if (Number(it.cashPrice) > 0) return Number(it.cashPrice);
@@ -574,7 +580,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var list = items.filter(function (it) { return (!cat || it.category === cat) && (!hideSold || it.status !== "vendido") && (!ts.length || matches(it, ts)); });
     grid.replaceChildren();
     list.forEach(function (it) {
-      var sold = it.status === "vendido", held = isHeld(it);
+      var sold = it.status === "vendido", held = isHeld(it) || it.status === "oferta";
       var pic = (it.photos || []).map(safePhoto).filter(Boolean)[0];
       var ph = h("div", { class: "ph" }, [
         pic ? h("img", { src: pic, alt: tr(it, "title"), loading: "lazy" }) : h("div", { class: "noimg", text: t("soon") }),
@@ -654,8 +660,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var it = items.filter(function (x) { return x.code === code; })[0];
     if (!it) return;
     current = it;
-    var sold = it.status === "vendido", held = isHeld(it);
-    document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held ? " · " + heldLabel(it) : "");
+    var sold = it.status === "vendido", held = isHeld(it), offer = !sold && it.status === "oferta";
+    document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held || offer ? " · " + heldLabel(it) : "");
     document.getElementById("m-title").textContent = tr(it, "title");
     document.getElementById("m-price").textContent = money(it.price);
     var mw = document.getElementById("m-was"), wl = wasLine(it);
@@ -709,6 +715,10 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       // Items with several units (qty) also carry one link that buys all of them (allPrice = qty x unit price).
       if (!plan.length && safeUrl(L.all) && Number(it.qty) > 1 && Number(it.allPrice) > 0) acts.appendChild(mpBtn("alt", t("payAllN", { n: it.qty }), money(it.allPrice), safeUrl(L.all)));
       if (safeUrl(L.delivery) && deliv > 0) acts.appendChild(mpBtn("alt", t("payDeliv"), money(it.price + deliv), safeUrl(L.delivery)));
+      if (offer && CONFIG.offerLocksPay) {
+        acts.querySelectorAll("a.btn.mp, details.plan").forEach(lockBtn);
+        acts.prepend(h("p", { class: "locknote", text: t("offerNote") }));
+      }
     }
     var msg = sold ? t("waSold", { code: it.code, title: tr(it, "title") }) : t("waOffer", { code: it.code, title: tr(it, "title"), price: money(it.price) });
     acts.appendChild(waBtn(sold ? t("btnSold") : t("btnOffer"), waLink(msg)));
