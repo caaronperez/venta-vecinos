@@ -408,7 +408,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       planH: "Paga con tarjeta en {n} pagos", planP: "Mercado Pago acepta hasta $300,000 por pago con tarjeta. Haz los {n} pagos (suman {total}) y mándame los comprobantes por WhatsApp.", planI: "Pago {i} de {n}",
       paidMark: "Pagado ✓", leftN: "Faltan {left} de {n} pagos ({amt}) para llevártelo", left1: "Falta 1 pago ({amt}) para llevártelo",
       allPaid: "¡Todos los pagos completos! ✓", progress: "{done} de {n} pagados", cardLeft: "Faltan {left} pagos para llevártelo", cardLeft1: "Falta 1 pago para llevártelo",
-      payWith: "Pagar con ", payPickup: "y recoger", payAll: "en 1 pago por SPEI", payDeliv: "+ envío", planBtn: "a MSI · {n} pagos con tarjeta",
+      payWith: "Pagar con ", payPickup: "y recoger", payAllN: "las {n} piezas", payAll: "en 1 pago por SPEI", payDeliv: "+ envío", planBtn: "a MSI · {n} pagos con tarjeta",
       waSold: "Hola, vi que vendiste {code} {title}. ¿Tienes algo parecido?", waOffer: "Hola, te ofrezco $____ por {code} · {title} (precio {price}).",
       btnSold: "Preguntar por algo parecido en WhatsApp", btnOffer: "Hazme una oferta en WhatsApp",
       other: "English"
@@ -439,7 +439,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       planH: "Pay by card in {n} payments", planP: "Mercado Pago accepts up to $300,000 per card payment. Make all {n} payments (they add up to {total}) and send me the receipts on WhatsApp.", planI: "Payment {i} of {n}",
       paidMark: "Paid ✓", leftN: "{left} of {n} payments left ({amt}) to take it home", left1: "1 payment left ({amt}) to take it home",
       allPaid: "All payments complete! ✓", progress: "{done} of {n} paid", cardLeft: "{left} payments left to take it home", cardLeft1: "1 payment left to take it home",
-      payWith: "Pay with ", payPickup: "and pick up", payAll: "in 1 SPEI transfer", payDeliv: "+ delivery", planBtn: "by card · {n} payments",
+      payWith: "Pay with ", payPickup: "and pick up", payAllN: "all {n} pieces", payAll: "in 1 SPEI transfer", payDeliv: "+ delivery", planBtn: "by card · {n} payments",
       waSold: "Hi, I saw you sold {code} {title}. Do you have something similar?", waOffer: "Hi, I'd offer $____ for {code} · {title} (price {price}).",
       btnSold: "Ask about something similar on WhatsApp", btnOffer: "Make me an offer on WhatsApp",
       other: "Español"
@@ -703,6 +703,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
         // The one-shot SPEI link is for the full price, so it only makes sense while no part has been paid.
         if (safeUrl(L.pickup) && pst.done === 0) acts.appendChild(mpBtn("alt", t("payAll"), money(it.price), safeUrl(L.pickup)));
       } else if (safeUrl(L.pickup)) acts.appendChild(mpBtn("", t("payPickup"), money(it.price), safeUrl(L.pickup)));
+      // Items with several units (qty) also carry one link that buys all of them (allPrice = qty x unit price).
+      if (!plan.length && safeUrl(L.all) && Number(it.qty) > 1 && Number(it.allPrice) > 0) acts.appendChild(mpBtn("alt", t("payAllN", { n: it.qty }), money(it.allPrice), safeUrl(L.all)));
       if (safeUrl(L.delivery) && deliv > 0) acts.appendChild(mpBtn("alt", t("payDeliv"), money(it.price + deliv), safeUrl(L.delivery)));
     }
     var msg = sold ? t("waSold", { code: it.code, title: tr(it, "title") }) : t("waOffer", { code: it.code, title: tr(it, "title"), price: money(it.price) });

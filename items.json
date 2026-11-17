@@ -212,12 +212,15 @@
   ],
   "status": "disponible",
   "links": {
-   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-caab3dfc-15de-4b6a-be8d-31c917bf43ff"
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-caab3dfc-15de-4b6a-be8d-31c917bf43ff",
+   "all": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-f8dde4b2-6e58-4cfa-9edc-24eb169760d0"
   },
   "en": {
    "title": "2 umbrella trees (schefflera) 2.2 m in black pots · $950 each",
    "description": "There are 2 real umbrella trees (aralia/schefflera), each about 2.2 m tall with pot, several trunks and lots of foliage. Each comes with its large black pot (about 45 cm). Price is per tree: $950 each with Mercado Pago or $900 each in cash. If you want both, pay the link twice or message me. Needs a big vehicle to transport.",
    "size": "2.2 m tall each"
-  }
+  },
+  "qty": 2,
+  "allPrice": 1900
  }
 ]
