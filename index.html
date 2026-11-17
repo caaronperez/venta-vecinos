@@ -76,6 +76,7 @@ svg.i { width: 26px; height: 26px; flex: none; fill: none; stroke: currentColor;
 .features { border: 1px solid var(--line); border-radius: 12px; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--paper); }
 .feature { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 16px 12px; font-size: 17px; }
 .feature + .feature { border-left: 1px solid var(--line); }
+.pickup-note { margin: 12px 0 0; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); font-size: 15px; text-align: center; }
 
 /* Articles header */
 .articles-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding: 30px 0 14px; border-bottom: 1px solid var(--line); }
@@ -310,6 +311,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     <div class="feature"><svg class="i"><use href="#i-cash"/></svg><span data-t="f2">Mismo precio en efectivo o con tarjeta</span></div>
     <div class="feature"><svg class="i"><use href="#i-truck"/></svg><span data-t="f3">Sin flete: lo recoges aquí mismo en BeGrand</span></div>
   </div>
+  <p class="pickup-note" data-t="pickupNote">Puedes recogerlo a partir del 23 de noviembre. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.</p>
 
   <section id="articulos" aria-label="Artículos" data-t-al="items">
     <div class="articles-head">
@@ -421,7 +423,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
       photo: "{t} · foto {i} de {n}", zoom: "Ampliar", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
-      msiBox: "Hasta 3 meses sin intereses · ", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, sin envío. Escríbeme por WhatsApp para apartarlo.",
+      msiBox: "Hasta 3 meses sin intereses · ", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, a partir del 23 de noviembre. Sin pago no queda apartado: si alguien más lo paga antes, se vende.", pickupNote: "Puedes recogerlo a partir del 23 de noviembre. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.",
       fCond: "Estado", fSize: "Medidas", fBrand: "Marca", fPickup: "Recoger en", fShip: "Envío", ship: "Por tu cuenta: Lalamove, Uber Flash o DiDi Entrega",
       planH: "Paga con tarjeta en {n} pagos", planP: "Mercado Pago acepta hasta $300,000 por pago con tarjeta. Haz los {n} pagos (suman {total}) y mándame los comprobantes por WhatsApp.", planI: "Pago {i} de {n}",
       paidMark: "Pagado ✓", leftN: "Faltan {left} de {n} pagos ({amt}) para llevártelo", left1: "Falta 1 pago ({amt}) para llevártelo",
@@ -452,7 +454,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
       photo: "{t} · photo {i} of {n}", zoom: "Zoom", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
-      msiBox: "Up to 3 interest-free installments · ", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, no delivery. Message me on WhatsApp to hold it.",
+      msiBox: "Up to 3 interest-free installments · ", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, starting November 23. Without payment it isn't held: if someone else pays first, it's sold.", pickupNote: "You can pick it up starting November 23. You can wait and pay when you pick it up, but that doesn't hold it: if someone else pays first, it's sold.",
       fCond: "Condition", fSize: "Size", fBrand: "Brand", fPickup: "Pickup at", fShip: "Delivery", ship: "Your own: Lalamove, Uber Flash or DiDi Entrega",
       planH: "Pay by card in {n} payments", planP: "Mercado Pago accepts up to $300,000 per card payment. Make all {n} payments (they add up to {total}) and send me the receipts on WhatsApp.", planI: "Payment {i} of {n}",
       paidMark: "Paid ✓", leftN: "{left} of {n} payments left ({amt}) to take it home", left1: "1 payment left ({amt}) to take it home",
