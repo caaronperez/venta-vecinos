@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Venta de mudanza · Vecinos BeGrand</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Venta de mudanza para vecinos de BeGrand Alto Polanco: muebles grandes, bici, pantalla, refrigerador y plantas. Sin flete.">
+<meta property="og:title" content="Venta de mudanza · Vecinos BeGrand">
+<meta property="og:description" content="Para vecinos: lo recoges aquí mismo, sin flete. Hasta 3 meses sin intereses.">
+<meta property="og:image" content="https://caaronperez.github.io/venta-vecinos/images/hero/IMG_4221.jpg">
+<meta property="og:url" content="https://caaronperez.github.io/venta-vecinos/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Idea: an apartment open house. Warm cream paper, deep plant green, a lime tag for deadlines and MSI, serif headlines like a real-estate brochure. */
+:root {
+  --cream: #F6F1E6;
+  --paper: #FBF8F1;
+  --green: #1E3A2B;
+  --ink: #14251B;
+  --muted: #5E6B61;
+  --line: #E2DACA;
+  --lime: #E8E36A;
+  --sage: #E3E7D8;
+  --wa: #25D366;
+  --mp-navy: #0A0080;
+  --sold: #B4432F;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font: 16px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.serif { font-family: var(--serif); }
+svg.i { width: 26px; height: 26px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Top bar */
+.top { border-bottom: 1px solid var(--line); background: var(--cream); position: sticky; top: 0; z-index: 6; }
+.top .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--green); }
+.brand b { font: 600 30px/1 var(--serif); letter-spacing: -.01em; }
+.brand svg.i { width: 34px; height: 34px; }
+.nav { display: flex; gap: 22px; }
+.nav a { text-decoration: none; font-size: 15px; color: var(--ink); }
+.nav a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.loc { margin-left: auto; display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; white-space: nowrap; }
+.loc svg.i { width: 20px; height: 20px; }
+.lang { font-weight: 700; font-size: 14px; color: var(--green); text-decoration: none; border: 1.5px solid var(--green); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+.lang:hover { background: var(--green); color: var(--paper); }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(300px, 420px) 1fr; gap: 24px; padding-top: 24px; padding-bottom: 24px; align-items: stretch; }
+.hero-text { display: grid; gap: 18px; align-content: center; padding: 8px 0; }
+.tag { justify-self: start; background: var(--lime); color: var(--ink); font-weight: 600; font-size: 15px; padding: 5px 14px; border-radius: 999px; }
+.hero h1 { margin: 0; font: italic 500 clamp(54px, 7vw, 92px)/.92 var(--serif); color: var(--green); letter-spacing: -.02em; }
+.hero p { margin: 0; font-size: 17px; max-width: 40ch; }
+.cta { justify-self: start; display: inline-flex; align-items: center; gap: 10px; background: var(--green); color: var(--paper); text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 24px; border-radius: 999px; }
+.cta:hover { background: #142A1E; }
+.photos { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; min-height: 380px; }
+.photos figure { margin: 0; border-radius: 16px; overflow: hidden; background: var(--sage); }
+.photos img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Features */
+.features { border: 1px solid var(--line); border-radius: 12px; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--paper); }
+.feature { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 16px 12px; font-size: 17px; }
+.feature + .feature { border-left: 1px solid var(--line); }
+
+/* Articles header */
+.articles-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding: 30px 0 14px; border-bottom: 1px solid var(--line); }
+.articles-head h2 { margin: 0; font: 600 42px/1 var(--serif); letter-spacing: -.01em; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 6px 16px; font-weight: 600; font-size: 15px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: var(--paper); }
+.toggle { margin-left: auto; display: inline-flex; gap: 10px; align-items: center; font-size: 16px; cursor: pointer; }
+.toggle input { width: 20px; height: 20px; accent-color: var(--green); }
+.count { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+.search { position: relative; margin-top: 16px; }
+.search svg.i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--muted); stroke-width: 2; pointer-events: none; }
+.search input { width: 100%; font: 500 17px var(--sans); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 13px 48px 13px 46px; -webkit-appearance: none; appearance: none; }
+.search input::placeholder { color: var(--muted); }
+.search input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(30,58,43,.15); }
+.search input::-webkit-search-cancel-button { display: none; }
+.search .clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border: 0; border-radius: 999px; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--muted); }
+.search .clear:hover { background: var(--sage); color: var(--ink); }
+.search .clear svg.i { position: static; transform: none; width: 18px; height: 18px; }
+.noresults { padding: 28px 4px; color: var(--muted); font-size: 17px; }
+.noresults a { color: var(--green); font-weight: 600; }
+
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; padding: 18px 0 8px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; padding: 0; text-align: left; cursor: pointer; display: grid; grid-template-rows: auto 1fr; transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -24px rgba(20,37,27,.55); }
+.card:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.card .ph { position: relative; aspect-ratio: 4 / 3.3; background: var(--sage); }
+.card .ph img { width: 100%; height: 100%; object-fit: cover; }
+.noimg { width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+.badge { position: absolute; left: 12px; top: 12px; font-weight: 700; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 6px; background: var(--green); color: var(--paper); }
+.badge.sold { background: var(--sold); }
+.msi-tag { position: absolute; right: 12px; bottom: 12px; background: var(--lime); color: var(--ink); font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 999px; }
+.card.is-sold .ph img { filter: grayscale(1); opacity: .55; }
+.card .meta { padding: 14px 16px 16px; display: grid; gap: 3px; align-content: start; }
+.code { font-size: 13px; color: var(--muted); letter-spacing: .02em; }
+.card h3 { margin: 0; font: 600 21px/1.15 var(--serif); text-wrap: balance; }
+.card .price { font: 700 22px/1.2 var(--serif); margin-top: 4px; font-variant-numeric: lining-nums tabular-nums; }
+.card .sub { font-size: 14px; color: var(--muted); }
+.orig { font-size: 14px; color: var(--muted); }
+.was { font-size: 14px; color: #B3261E; font-weight: 600; }
+.was s { color: var(--muted); font-weight: 400; }
+.badge.deal { background: #B3261E; color: #fff; }
+#m-was .was { font-size: 18px; }
+.orig s { color: var(--ink); opacity: .75; }
+.orig .save { color: #137A3F; font-weight: 700; margin-left: 6px; }
+
+/* Empty */
+.empty { background: var(--sage); border-radius: 16px; padding: 30px 20px 34px; margin-top: 18px; display: grid; justify-items: center; text-align: center; gap: 8px; }
+.empty .boxart { color: var(--green); }
+.empty .boxart svg { width: 70px; height: 70px; }
+.empty h3 { margin: 0; font: 600 34px/1.1 var(--serif); color: var(--green); }
+.empty p { margin: 0 0 8px; font-size: 17px; }
+
+/* Buttons */
+.btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; text-decoration: none; font-weight: 600; font-size: 17px; padding: 13px 18px; border-radius: 10px; cursor: pointer; border: 2px solid transparent; }
+.btn .amt { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+.btn.mp { background: #fff; border-color: var(--mp-navy); color: var(--mp-navy); }
+.btn.mp.alt { border-color: #CFC8B8; }
+.btn .mplogo { height: 40px; width: auto; display: inline-block; vertical-align: middle; margin: -12px -2px; }
+.btn.wa { background: var(--wa); color: var(--ink); }
+.plan { display: grid; gap: 10px; }
+.plan > summary { list-style: none; }
+.plan > summary::-webkit-details-marker { display: none; }
+.plan > summary .chev { display: block; width: 20px; height: 20px; stroke-width: 2.2; transform-origin: 50% 50%; transition: transform .2s ease; }
+.plan[open] > summary .chev { transform: rotate(180deg); }
+.plan .plan-body { border: 1.5px solid var(--mp-navy); border-radius: 12px; padding: 14px 16px; display: grid; gap: 10px; }
+.plan h3 { margin: 0; font: 700 20px/1.2 var(--serif); color: var(--mp-navy); }
+.plan p { margin: 0; font-size: 15px; color: var(--muted); }
+.plan ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.plan a { display: grid; gap: 1px; text-decoration: none; color: var(--mp-navy); background: #fff; border: 1.5px solid #CFC8B8; border-radius: 10px; padding: 8px 12px; }
+.plan a:hover { border-color: var(--mp-navy); }
+.plan a span, .plan .done span { font-size: 13px; color: var(--muted); }
+.plan .done { display: grid; gap: 1px; border-radius: 10px; padding: 8px 12px; background: var(--sage); border: 1.5px solid var(--sage); color: var(--green); }
+.plan .done b { font-size: 17px; font-variant-numeric: tabular-nums; }
+.plan .done em { font-style: normal; font-weight: 700; font-size: 13px; }
+.plan .left { font-weight: 700; color: var(--ink); }
+.plan .bar { height: 8px; border-radius: 999px; background: var(--sage); overflow: hidden; }
+.plan .bar i { display: block; height: 100%; background: var(--green); }
+.btn .sub2 { display: block; font-size: 14px; font-weight: 600; color: var(--sold); margin-top: 2px; }
+.card .left { font-size: 14px; font-weight: 700; color: var(--sold); }
+.plan a b { font-size: 17px; font-variant-numeric: tabular-nums; }
+.btn.wa-dark { background: var(--green); color: var(--paper); width: auto; padding: 12px 30px; border-radius: 999px; }
+.btn .walogo { width: 26px; height: 26px; flex: none; }
+.btn:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+
+/* How */
+.how { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-top: 34px; padding: 24px 0 8px; }
+.step { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; padding: 4px 26px; align-content: start; }
+.step + .step { border-left: 1px solid var(--line); }
+.step:first-child { padding-left: 0; }
+.step svg.i { width: 44px; height: 44px; grid-row: span 2; color: var(--green); }
+.step h3 { margin: 0; font: 600 26px/1.1 var(--serif); }
+.step p { margin: 0; font-size: 15px; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); margin-top: 36px; }
+footer .wrap { padding-top: 20px; padding-bottom: 34px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; font-size: 14px; color: var(--muted); }
+footer .mpfoot { display: inline-flex; align-items: center; gap: 4px; }
+footer .mpfoot img { height: 34px; width: auto; margin: -10px -2px; }
+
+/* Modal */
+dialog { border: none; padding: 0; border-radius: 22px; width: min(1120px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); background: var(--paper); color: var(--ink); box-shadow: 0 40px 90px -30px rgba(20,37,27,.6); }
+dialog:focus { outline: none; }
+dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
+.m { display: grid; grid-template-columns: 1.15fr 1fr; max-height: calc(100dvh - 24px); }
+.gallery { display: grid; grid-template-rows: 1fr auto; border-right: 1px solid var(--line); position: relative; min-height: 0; }
+.gallery .main { position: relative; overflow: hidden; background: var(--sage); min-height: 360px; }
+.gallery .main img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.gallery .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: none; background: rgba(255,255,255,.95); cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 14px -6px rgba(0,0,0,.4); z-index: 1; }
+.gallery .nav-btn svg.i { width: 22px; height: 22px; stroke-width: 2.2; }
+.gallery .prev { left: 14px; } .gallery .next { right: 14px; }
+.thumbs { display: flex; gap: 10px; padding: 14px 20px; overflow-x: auto; }
+.thumbs button { flex: none; width: 128px; height: 112px; border-radius: 12px; overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: var(--sage); }
+.thumbs button[aria-current="true"] { border-color: var(--green); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.info { padding: 26px 28px 24px; display: grid; gap: 14px; align-content: start; overflow-y: auto; }
+.info-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.kicker { font-weight: 700; font-size: 17px; }
+.close { flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--paper); cursor: pointer; display: grid; place-items: center; }
+.close svg.i { width: 20px; height: 20px; stroke-width: 2; }
+.close.gclose { display: none; }
+.info h2 { margin: -6px 0 0; font: 700 clamp(32px, 4vw, 46px)/1.02 var(--serif); letter-spacing: -.02em; text-wrap: balance; }
+.bigprice { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.bigprice b { font: 700 clamp(44px, 5vw, 58px)/1 var(--serif); letter-spacing: -.02em; font-variant-numeric: lining-nums; }
+.bigprice span { font-size: 17px; }
+#m-orig .orig { font-size: 18px; }
+.msi-box { background: var(--lime); border-radius: 10px; padding: 10px 16px; font-size: 18px; display: flex; gap: 12px; align-items: center; }
+.msi-box b { font-weight: 700; }
+.cash-box { border: 1.5px dashed var(--green); border-radius: 10px; padding: 10px 16px; font-size: 17px; display: flex; gap: 12px; align-items: center; }
+.cash-box b { font: 700 22px/1 var(--serif); }
+.cash-box small { display: block; color: var(--muted); font-size: 14px; }
+.card .cash { font-size: 14px; font-weight: 600; color: var(--green); }
+.btn.cashbtn { background: var(--paper); border-color: var(--green); color: var(--green); }
+.facts { margin: 0; display: grid; grid-template-columns: 170px 1fr; font-size: 17px; }
+.facts dt, .facts dd { margin: 0; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--muted); }
+.desc { margin: 0; font-size: 17px; white-space: pre-wrap; }
+.actions { display: grid; gap: 10px; }
+.share { justify-self: start; background: none; border: none; padding: 0; font-size: 17px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.fine { margin: 0; font-size: 14px; color: var(--muted); }
+
+@media (max-width: 980px) {
+  .nav { display: none; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .photos { min-height: 0; height: 300px; }
+  .m { grid-template-columns: 1fr; grid-template-rows: auto auto; overflow-y: auto; }
+  .gallery { border-right: none; }
+  .gallery .main { min-height: 0; height: min(80vw, 48dvh); }
+  .thumbs button { width: 76px; height: 64px; }
+  .info { overflow: visible; }
+  .close.gclose { display: grid; position: absolute; top: 12px; right: 12px; z-index: 2; border: none; background: rgba(255,255,255,.95); }
+  .info-top .close { display: none; }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 16px; }
+  .brand b { font-size: 26px; }
+  .photos { height: 220px; }
+  .features { grid-template-columns: 1fr; }
+  .feature { justify-content: flex-start; }
+  .feature + .feature { border-left: none; border-top: 1px solid var(--line); }
+  .articles-head h2 { font-size: 34px; }
+  .toggle { margin-left: 0; }
+  .how { grid-template-columns: 1fr; gap: 18px; }
+  .step, .step:first-child { padding: 0; }
+  .step + .step { border-left: none; }
+  .facts { grid-template-columns: 120px 1fr; font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card { transition: none; } .card:hover { transform: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-box" viewBox="0 0 32 32"><path d="M4 11l12-5 12 5-12 5z"/><path d="M4 11v11l12 5 12-5V11"/><path d="M16 16v11"/><path d="M4 11l-2 4 12 5 2-4M28 11l2 4-12 5-2-4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-card" viewBox="0 0 32 24"><rect x="2" y="3" width="28" height="18" rx="3"/><path d="M2 9h28M7 16h7"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 34 24"><rect x="4" y="3" width="28" height="16" rx="2"/><path d="M2 7v14h26"/><circle cx="18" cy="11" r="3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 34 24"><path d="M2 5h18v13H2zM20 9h7l5 5v4H20"/><circle cx="8" cy="19" r="2.6"/><circle cx="26" cy="19" r="2.6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 44 44"><path d="M17 36c-3-2-7-7-8-10-.6-1.8 1.6-3 3-1.6l3 3V12a2.2 2.2 0 0 1 4.4 0v9-2.4a2.2 2.2 0 0 1 4.4 0V21v-1.6a2.2 2.2 0 0 1 4.4 0V22v-.8a2.2 2.2 0 0 1 4.4 0V29c0 4-2.6 7-6.6 7z"/><path d="M12 6l2 3M17 3v4M22 6l-2 3"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 44 44"><path d="M22 6h14v14L19 37 5 23z"/><circle cx="30" cy="12" r="2.4"/></symbol>
+  <symbol id="i-open" viewBox="0 0 44 44"><path d="M6 16l16-7 16 7-16 7z"/><path d="M6 16v15l16 7 16-7V16"/><path d="M22 23v15"/><path d="M6 16l-3 6 16 7 3-6M38 16l3 6-16 7-3-6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><svg class="i"><use href="#i-box"/></svg><b>Mudanza</b></a>
+    <nav class="nav" id="nav" aria-label="Secciones" data-t-al="sections"></nav>
+    <span class="loc"><svg class="i"><use href="#i-pin"/></svg><span id="loc">Ciudad de México</span></span>
+    <a class="lang" id="lang" href="#" hidden>English</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="tag" id="deadline">Hasta el 25 de noviembre</span>
+      <h1 data-t="h1">Venta para vecinos</h1>
+      <p data-t="lead">Me mudo y estas cosas son difíciles de llevar. Si vives en BeGrand, te ahorras el flete: lo recoges aquí mismo. Paga con Mercado Pago hasta 3 meses sin intereses, o en efectivo con descuento al recoger.</p>
+      <a class="cta" href="#articulos"><span data-t="cta">Ver artículos</span> <svg class="i" style="width:20px;height:20px;stroke-width:2"><use href="#i-down"/></svg></a>
+    </div>
+    <div class="photos">
+      <figure><img src="images/hero/IMG_4221.jpg" alt="Sala y comedor del departamento" data-t-alt="heroAlt1" fetchpriority="high"></figure>
+      <figure><img src="images/hero/IMG_4219.jpg" alt="Recámara del departamento" data-t-alt="heroAlt2"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="features">
+    <div class="feature"><svg class="i"><use href="#i-card"/></svg><span data-t="f1">Hasta 3 meses sin intereses</span></div>
+    <div class="feature"><svg class="i"><use href="#i-cash"/></svg><span data-t="f2">Descuento en efectivo al recoger</span></div>
+    <div class="feature"><svg class="i"><use href="#i-truck"/></svg><span data-t="f3">Sin flete: lo recoges aquí mismo en BeGrand</span></div>
+  </div>
+
+  <section id="articulos" aria-label="Artículos" data-t-al="items">
+    <div class="articles-head">
+      <h2 data-t="items">Artículos</h2>
+      <div class="chips" id="chips"><button class="chip" type="button" data-cat="" aria-pressed="true" data-t="all">Todo</button></div>
+      <label class="toggle" for="hide-sold"><input type="checkbox" id="hide-sold"> <span data-t="hideSold">Ocultar vendidos</span></label>
+    </div>
+    <div class="search" role="search">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input type="search" id="q" placeholder="Buscar: nombre, precio, código, marca, medidas…" aria-label="Buscar artículos" data-t-ph="searchPh" data-t-al="searchAl" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <button class="clear" type="button" id="q-clear" aria-label="Borrar búsqueda" data-t-al="clear" hidden><svg class="i"><use href="#i-x"/></svg></button>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <p class="noresults" id="noresults" hidden></p>
+    <div class="empty" id="empty" hidden>
+      <span class="boxart" aria-hidden="true"><svg viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M33 4v7M22 8l4 6M46 8l-4 6" stroke="#C9C23A" stroke-width="3"/><path d="M11 32l24-10 24 10-24 10z"/><path d="M11 32v18l24 10 24-10V32"/><path d="M35 42v18"/><path d="M11 32l-5 7 24 10 5-7M59 32l5 7-24 10-5-7"/></svg></span>
+      <h3 data-t="emptyH">Estoy subiendo los artículos</h3>
+      <p data-t="emptyP">Si buscas algo en específico, escríbeme.</p>
+      <a class="btn wa-dark" id="empty-wa" target="_blank" rel="noopener"><img class="walogo" src="brand/whatsapp-glyph-white.svg" alt=""><span data-t="emptyBtn">Escríbeme por WhatsApp</span></a>
+    </div>
+  </section>
+
+  <section class="how" id="como-comprar" aria-label="Cómo comprar" data-t-al="how">
+    <div class="step"><svg class="i"><use href="#i-hand"/></svg><h3 data-t="s1h">Elige</h3><p data-t="s1p">Toca cualquier artículo para ver fotos, medidas y detalles.</p></div>
+    <div class="step"><svg class="i"><use href="#i-tag"/></svg><h3 data-t="s2h">Paga o haz una oferta</h3><p data-t="s2p">Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia), en efectivo al recoger con descuento, o mándame tu oferta por WhatsApp.</p></div>
+    <div class="step"><svg class="i"><use href="#i-open"/></svg><h3 data-t="s3h">Recoge</h3><p id="step3">Coordinamos día y hora por WhatsApp y lo recoges aquí en el edificio.</p></div>
+  </section>
+</div>
+
+<footer id="contacto">
+  <div class="wrap">
+    <span class="mpfoot"><span data-t="secure">Pagos seguros con</span> <img src="brand/mercadopago-color-horizontal.svg" alt="Mercado Pago"></span>
+    <span data-t="footPrices">Precios en pesos mexicanos (MXN). El precio en efectivo es solo para recoger en persona.</span>
+    <a id="foot-wa" target="_blank" rel="noopener" data-t="footWa">Contacto por WhatsApp</a>
+  </div>
+</footer>
+
+<dialog id="modal" aria-labelledby="m-title" tabindex="-1">
+  <div class="m">
+    <div class="gallery">
+      <button class="close gclose" type="button" id="m-close2" aria-label="Cerrar" data-t-al="close"><svg class="i"><use href="#i-x"/></svg></button>
+      <div class="main" id="m-main"></div>
+      <div class="thumbs" id="m-thumbs"></div>
+    </div>
+    <div class="info">
+      <div class="info-top">
+        <span class="kicker" id="m-code"></span>
+        <button class="close" type="button" id="m-close" aria-label="Cerrar" data-t-al="close"><svg class="i"><use href="#i-x"/></svg></button>
+      </div>
+      <h2 id="m-title"></h2>
+      <div class="bigprice"><b id="m-price"></b><span data-t="withMp">MXN · con Mercado Pago</span></div>
+      <div id="m-was" hidden></div>
+      <div id="m-orig"></div>
+      <div class="msi-box" id="m-msi"></div>
+      <div class="cash-box" id="m-cash"></div>
+      <dl class="facts" id="m-facts"></dl>
+      <p class="desc" id="m-desc"></p>
+      <div class="actions" id="m-actions"></div>
+      <button class="share" type="button" id="m-share" data-t="copy">Copiar enlace</button>
+      <p class="fine" data-t="fine">Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.</p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  // ---- Settings (edit these) ----
+  var CONFIG = {
+    whatsapp: "13605908567",      // number with country code, digits only
+    whatsappFallback: "https://wa.me/qr/PAX2YVEUDF44G1?s=p",
+    pickup: "BeGrand Alto Polanco, Torre 4 · Anáhuac I Secc., CP 11320, CDMX",
+    pickupShort: "Alto Polanco, CDMX",
+    deadline: "2026-11-25T23:59:00-06:00",
+    // Cash price = Mercado Pago price minus its commission (3.49% + $4, + IVA), rounded down to $10. Pickup only.
+    mpRate: 0.0349, mpFixed: 4, iva: 1.16
+  };
+
+  // ---- Language: index.html is Spanish; en/index.html is the same page in English (tools/sync.py pages copies it). ----
+  var LANG = document.documentElement.lang === "en" ? "en" : "es";
+  // PAGE = this language's catalog URL; ROOT = the site root (images/, brand/, items.json). Both absolute, because an open item
+  // shows its own address (…/i/MV-90/) in the address bar, and relative paths would resolve against that.
+  var PAGE = location.href.split("#")[0].split("?")[0].replace(/index\.html$/, "").replace(/i\/MV-\d+\/?$/, "");
+  var ROOT = new URL(LANG === "en" ? "../" : "./", PAGE).href;
+  var OTHER = ROOT;
+  function itemUrl(code, base) { return (base || PAGE) + "#" + code; }
+  var STR = {
+    es: {
+      h1: "Venta para vecinos",
+      lead: "Me mudo y estas cosas son difíciles de llevar. Si vives en BeGrand, te ahorras el flete: lo recoges aquí mismo. Paga con Mercado Pago hasta 3 meses sin intereses, o en efectivo con descuento al recoger.",
+      cta: "Ver artículos", heroAlt1: "Sala y comedor del departamento", heroAlt2: "Recámara del departamento",
+      f1: "Hasta 3 meses sin intereses", f2: "Descuento en efectivo al recoger", f3: "Sin flete: lo recoges aquí mismo en BeGrand",
+      items: "Artículos", all: "Todo", hideSold: "Ocultar vendidos", sections: "Secciones", how: "Cómo comprar", contact: "Contacto",
+      searchPh: "Buscar: nombre, precio, código, marca, medidas…", searchAl: "Buscar artículos", clear: "Borrar búsqueda",
+      emptyH: "Estoy subiendo los artículos", emptyP: "Si buscas algo en específico, escríbeme.", emptyBtn: "Escríbeme por WhatsApp",
+      s1h: "Elige", s1p: "Toca cualquier artículo para ver fotos, medidas y detalles.",
+      s2h: "Paga o haz una oferta", s2p: "Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia), en efectivo al recoger con descuento, o mándame tu oferta por WhatsApp.",
+      s3h: "Recoge", s3p: "Recoge en {pickup}. Coordinamos día y hora por WhatsApp.",
+      secure: "Pagos seguros con", footPrices: "Precios en pesos mexicanos (MXN). El precio en efectivo es solo para recoger en persona.", footWa: "Contacto por WhatsApp",
+      close: "Cerrar", withMp: "MXN · con Mercado Pago", copy: "Copiar enlace", copied: "Enlace copiado ✓",
+      fine: "Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.",
+      daysLeft: "Hasta el 25 de noviembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
+      waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
+      sold: "Vendido", held: "Apartado", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
+      orMsi: "o 3 × {amt} sin intereses", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
+      results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
+      noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
+      photo: "{t} · foto {i} de {n}", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
+      msiBox: "Hasta 3 meses sin intereses · ", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, sin envío. Escríbeme por WhatsApp para apartarlo.",
+      fCond: "Estado", fSize: "Medidas", fBrand: "Marca", fPickup: "Recoger en", fShip: "Envío", ship: "Por tu cuenta: Lalamove, Uber Flash o DiDi Entrega",
+      planH: "Paga con tarjeta en {n} pagos", planP: "Mercado Pago acepta hasta $300,000 por pago con tarjeta. Haz los {n} pagos (suman {total}) y mándame los comprobantes por WhatsApp.", planI: "Pago {i} de {n}",
+      paidMark: "Pagado ✓", leftN: "Faltan {left} de {n} pagos ({amt}) para llevártelo", left1: "Falta 1 pago ({amt}) para llevártelo",
+      allPaid: "¡Todos los pagos completos! ✓", progress: "{done} de {n} pagados", cardLeft: "Faltan {left} pagos para llevártelo", cardLeft1: "Falta 1 pago para llevártelo",
+      payWith: "Pagar con ", payPickup: "y recoger", payAll: "en 1 pago por SPEI", payDeliv: "+ envío", planBtn: "a MSI · {n} pagos con tarjeta",
+      waSold: "Hola, vi que vendiste {code} {title}. ¿Tienes algo parecido?", waOffer: "Hola, te ofrezco $____ por {code} · {title} (precio {price}).",
+      btnSold: "Preguntar por algo parecido en WhatsApp", btnOffer: "Hazme una oferta en WhatsApp",
+      other: "English"
+    },
+    en: {
+      h1: "Moving sale",
+      lead: "I'm moving and everything has to go. Used furniture and home goods in good condition. Pay with Mercado Pago in up to 3 interest-free installments, or in cash with a discount at pickup.",
+      cta: "See items", heroAlt1: "Apartment living and dining room", heroAlt2: "Apartment bedroom",
+      f1: "Up to 3 interest-free installments", f2: "Cash discount at pickup", f3: "Pick up in person or send a Lalamove / Uber Flash",
+      items: "Items", all: "All", hideSold: "Hide sold", sections: "Sections", how: "How to buy", contact: "Contact",
+      searchPh: "Search: name, price, code, brand, size…", searchAl: "Search items", clear: "Clear search",
+      emptyH: "I'm uploading the items", emptyP: "Looking for something specific? Message me.", emptyBtn: "Message me on WhatsApp",
+      s1h: "Choose", s1p: "Tap any item to see photos, measurements and details.",
+      s2h: "Pay or make an offer", s2p: "Pay with Mercado Pago (card in up to 3 interest-free installments, OXXO or bank transfer), in cash with a discount at pickup, or send me your offer on WhatsApp.",
+      s3h: "Pick up or get it delivered", s3p: "Pick up at {pickup}. For delivery, you book the Lalamove, Uber Flash or DiDi Entrega and pay the driver directly. We arrange it on WhatsApp.",
+      secure: "Secure payments with", footPrices: "Prices in Mexican pesos (MXN). The cash price is for in-person pickup only.", footWa: "Contact on WhatsApp",
+      close: "Close", withMp: "MXN · with Mercado Pago", copy: "Copy link", copied: "Link copied ✓",
+      fine: "Pay with Mercado Pago and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.",
+      daysLeft: "Until November 25 · {n} days left", lastDay: "Last day", lastItems: "Last items",
+      waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
+      sold: "Sold", held: "On hold", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
+      orMsi: "or 3 × {amt} interest-free", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
+      results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
+      noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
+      photo: "{t} · photo {i} of {n}", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
+      msiBox: "Up to 3 interest-free installments · ", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, no delivery. Message me on WhatsApp to hold it.",
+      fCond: "Condition", fSize: "Size", fBrand: "Brand", fPickup: "Pickup at", fShip: "Delivery", ship: "Your own: Lalamove, Uber Flash or DiDi Entrega",
+      planH: "Pay by card in {n} payments", planP: "Mercado Pago accepts up to $300,000 per card payment. Make all {n} payments (they add up to {total}) and send me the receipts on WhatsApp.", planI: "Payment {i} of {n}",
+      paidMark: "Paid ✓", leftN: "{left} of {n} payments left ({amt}) to take it home", left1: "1 payment left ({amt}) to take it home",
+      allPaid: "All payments complete! ✓", progress: "{done} of {n} paid", cardLeft: "{left} payments left to take it home", cardLeft1: "1 payment left to take it home",
+      payWith: "Pay with ", payPickup: "and pick up", payAll: "in 1 SPEI transfer", payDeliv: "+ delivery", planBtn: "by card · {n} payments",
+      waSold: "Hi, I saw you sold {code} {title}. Do you have something similar?", waOffer: "Hi, I'd offer $____ for {code} · {title} (price {price}).",
+      btnSold: "Ask about something similar on WhatsApp", btnOffer: "Make me an offer on WhatsApp",
+      other: "Español"
+    }
+  };
+  function t(k, v) {
+    var s = (STR[LANG] && STR[LANG][k] != null ? STR[LANG][k] : STR.es[k]) || "";
+    return v ? s.replace(/\{(\w+)\}/g, function (m, x) { return v[x] != null ? String(v[x]) : m; }) : s;
+  }
+  var CAT_EN = { "Cocina": "Kitchen", "Decoración": "Decor", "Electrodomésticos": "Appliances", "Electrónica": "Electronics", "Hogar": "Home",
+    "Iluminación": "Lighting", "Mascotas": "Pets", "Movilidad": "Mobility", "Muebles": "Furniture", "Organización": "Storage", "Recámara": "Bedroom" };
+  var COND_EN = { "Nuevo": "New", "Como nuevo": "Like new", "Buen estado": "Good condition", "Con detalles de uso": "Shows some wear" };
+  // Split payments (items over the card limit): parts in items.json paymentPlan, each marked "paid" by tools/sync.py parts.
+  function planOf(it) { return (Array.isArray(it.paymentPlan) ? it.paymentPlan : []).filter(function (p) { return p && safeUrl(p.url) && Number(p.amount) > 0; }); }
+  function planLeft(plan) {
+    var left = plan.filter(function (p) { return !p.paid; });
+    return { n: plan.length, done: plan.length - left.length, left: left.length, amt: left.reduce(function (a, p) { return a + Number(p.amount); }, 0) };
+  }
+  function leftText(st) { return st.left === 0 ? t("allPaid") : st.left === 1 ? t("left1", { amt: money(st.amt) }) : t("leftN", { left: st.left, n: st.n, amt: money(st.amt) }); }
+  function catName(c) { return LANG === "en" ? (CAT_EN[c] || c) : c; }
+  // Item text in the page's language: items.json may carry an "en" block; otherwise the Spanish text shows.
+  function tr(it, k) {
+    var e = it.en && typeof it.en === "object" ? it.en : null;
+    if (LANG === "en" && e && e[k]) return e[k];
+    if (LANG === "en" && k === "condition") return COND_EN[it[k]] || it[k];
+    return it[k];
+  }
+  document.querySelectorAll("[data-t]").forEach(function (el) { el.textContent = t(el.getAttribute("data-t")); });
+  document.querySelectorAll("[data-t-ph]").forEach(function (el) { el.setAttribute("placeholder", t(el.getAttribute("data-t-ph"))); });
+  document.querySelectorAll("[data-t-al]").forEach(function (el) { el.setAttribute("aria-label", t(el.getAttribute("data-t-al"))); });
+  document.querySelectorAll("[data-t-alt]").forEach(function (el) { el.setAttribute("alt", t(el.getAttribute("data-t-alt"))); });
+  (function () {
+    var a = document.getElementById("lang");
+    a.textContent = t("other"); a.setAttribute("hreflang", LANG === "en" ? "es" : "en"); a.setAttribute("lang", LANG === "en" ? "es" : "en");
+    function sync() { var m = location.href.match(/(?:#|\/i\/)(MV-\d+)/); a.href = m ? itemUrl(m[1], OTHER) : OTHER; }
+    sync(); window.addEventListener("hashchange", sync); a.addEventListener("click", sync);
+  })();
+
+  function h(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    for (var k in (attrs || {})) {
+      var v = attrs[k]; if (v == null || v === false) continue;
+      if (k === "text") e.textContent = v;
+      else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v === true ? "" : v);
+    }
+    (kids || []).forEach(function (c) { if (c != null && c !== false) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function icon(id, cls) {
+    var s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    s.setAttribute("class", "i" + (cls ? " " + cls : "")); s.setAttribute("aria-hidden", "true");
+    var u = document.createElementNS("http://www.w3.org/2000/svg", "use"); u.setAttribute("href", "#" + id); s.appendChild(u);
+    return s;
+  }
+  function cashPrice(it) {
+    if (Number(it.cashPrice) > 0) return Number(it.cashPrice);
+    var p = Number(it.price) || 0;
+    return Math.floor((p - (p * CONFIG.mpRate + CONFIG.mpFixed) * CONFIG.iva) / 10) * 10;
+  }
+  function money(n) { return "$" + Math.round(Number(n) || 0).toLocaleString("es-MX"); }
+  function safeUrl(u) { return typeof u === "string" && /^https:\/\//.test(u) ? u : null; }
+  function safePhoto(p) { return typeof p === "string" && /^images\/[\w.\-\/]+$/.test(p) ? ROOT + p : typeof p === "string" && /^https:\/\//.test(p) ? p : null; }
+  function waLink(text) {
+    var n = String(CONFIG.whatsapp || "").replace(/\D/g, "");
+    return n ? "https://wa.me/" + n + "?text=" + encodeURIComponent(text) : CONFIG.whatsappFallback;
+  }
+  function wasLine(it) {
+    var w = Number(it.wasPrice) || 0, p = Number(it.price) || 0;
+    if (w <= p || it.status === "vendido") return null;
+    return h("div", { class: "was" }, [t("was"), h("s", { text: money(w) })]);
+  }
+  function origLine(it) {
+    var o = Number(it.originalPrice) || 0, p = Number(it.price) || 0;
+    if (o <= p) return null;
+    return h("div", { class: "orig" }, [t("orig"), h("s", { text: money(o) }), h("span", { class: "save", text: "-" + Math.round((1 - p / o) * 100) + "%" })]);
+  }
+  function mpBtn(cls, after, amt, href) {
+    return h("a", { class: "btn mp " + cls, href: href, target: "_blank", rel: "noopener" }, [
+      h("span", null, [t("payWith"), h("img", { class: "mplogo", src: ROOT + "brand/mercadopago-color-horizontal.svg", alt: "Mercado Pago" }), " " + after]),
+      h("span", { class: "amt", text: amt })
+    ]);
+  }
+  function waBtn(label, href) {
+    return h("a", { class: "btn wa", href: href, target: "_blank", rel: "noopener" }, [h("img", { class: "walogo", src: ROOT + "brand/whatsapp-glyph-white.svg", alt: "" }), h("span", { text: label })]);
+  }
+
+  // ---- Static bits ----
+  if (CONFIG.pickup) {
+    document.getElementById("loc").textContent = CONFIG.pickupShort || CONFIG.pickup;
+    document.getElementById("step3").textContent = t("s3p", { pickup: CONFIG.pickup });
+  }
+  (function () {
+    var days = Math.ceil((new Date(CONFIG.deadline) - new Date()) / 86400000);
+    document.getElementById("deadline").textContent = days > 1 ? t("daysLeft", { n: days }) : days === 1 ? t("lastDay") : t("lastItems");
+  })();
+  document.getElementById("empty-wa").href = waLink(t("waEmpty"));
+  document.getElementById("foot-wa").href = waLink(t("waFoot"));
+
+  var items = [], cat = "", hideSold = false, query = "";
+  // Search: every word must appear somewhere (title, description, code, price, brand, size…). Accents and case are ignored.
+  function fold(s) { return String(s == null ? "" : s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
+  function terms(q) {
+    return fold(q).split(/\s+/).map(function (t) { return /^\$?[\d.,]+$/.test(t) ? t.replace(/[$,]/g, "").replace(/\.0+$/, "") : t; }).filter(Boolean);
+  }
+  function haystack(it) {
+    if (it._hay) return it._hay;
+    var code = String(it.code || "");
+    var prices = [it.price, cashPrice(it), it.originalPrice].filter(function (n) { return Number(n) > 0; })
+      .map(function (n) { n = Math.round(Number(n)); return n + " $" + n + " " + n.toLocaleString("es-MX"); });
+    var st = it.status === "vendido" ? "vendido" : it.status === "apartado" ? "apartado" : "disponible";
+    var en = it.en && typeof it.en === "object" ? it.en : {};
+    var stEn = st === "vendido" ? "sold" : st === "apartado" ? "on hold" : "available";
+    it._hay = fold([code, code.replace(/[^a-z0-9]/gi, ""), code.replace(/^MV-0?/i, ""), it.title, it.description, it.category, it.condition, it.size, it.brand, st, prices.join(" "),
+      en.title, en.description, en.size, en.condition, CAT_EN[it.category], COND_EN[it.condition], stEn].join(" \n "));
+    return it._hay;
+  }
+  function matches(it, ts) { var hs = haystack(it); return ts.every(function (t) { return hs.indexOf(t) >= 0; }); }
+  var grid = document.getElementById("grid");
+
+  function setCat(c) {
+    cat = c;
+    document.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", String(x.getAttribute("data-cat") === c)); });
+    render();
+  }
+
+  function render() {
+    var ts = terms(query);
+    var list = items.filter(function (it) { return (!cat || it.category === cat) && (!hideSold || it.status !== "vendido") && (!ts.length || matches(it, ts)); });
+    grid.replaceChildren();
+    list.forEach(function (it) {
+      var sold = it.status === "vendido", held = it.status === "apartado";
+      var pic = (it.photos || []).map(safePhoto).filter(Boolean)[0];
+      var ph = h("div", { class: "ph" }, [
+        pic ? h("img", { src: pic, alt: tr(it, "title"), loading: "lazy" }) : h("div", { class: "noimg", text: t("soon") }),
+        sold ? h("span", { class: "badge sold", text: t("sold") }) : held ? h("span", { class: "badge", text: t("held") }) : wasLine(it) ? h("span", { class: "badge deal", text: t("deal") }) : null,
+        sold ? null : h("span", { class: "msi-tag", text: t("msiTag") })
+      ]);
+      var meta = h("div", { class: "meta" }, [
+        h("span", { class: "code", text: it.code }),
+        h("h3", { text: tr(it, "title") }),
+        h("div", { class: "price", text: money(it.price) }),
+        wasLine(it),
+        (function () {
+          var pl = planOf(it);
+          if (sold || !pl.length) return h("div", { class: "sub", text: sold ? t("sold") : t("orMsi", { amt: money(it.price / 3) }) });
+          var st = planLeft(pl);
+          return h("div", { class: "left", text: st.left === 0 ? t("allPaid") : st.left === 1 ? t("cardLeft1") : t("cardLeft", { left: st.left }) });
+        })(),
+        sold ? null : h("div", { class: "cash", text: t("cashAt", { amt: money(cashPrice(it)) }) }),
+        origLine(it)
+      ]);
+      grid.appendChild(h("button", { class: "card" + (sold ? " is-sold" : ""), type: "button", "aria-label": it.code + ", " + tr(it, "title") + ", " + money(it.price), onclick: function () { open(it.code); } }, [ph, meta]));
+    });
+    var avail = items.filter(function (i) { return i.status !== "vendido"; }).length;
+    var nr = document.getElementById("noresults");
+    if (ts.length && items.length) {
+      document.getElementById("count").textContent = list.length === 1 ? t("results1") : t("resultsN", { n: list.length });
+      nr.hidden = list.length > 0;
+      if (!list.length) nr.replaceChildren(t("noMatch", { q: query.trim(), cat: cat ? t("inCat", { c: catName(cat) }) : "" }),
+        h("a", { href: waLink(t("waAsk", { q: query.trim() })), target: "_blank", rel: "noopener", text: t("askWa") }), ".");
+    } else {
+      document.getElementById("count").textContent = items.length ? t("avail", { a: avail, n: items.length }) : "";
+      nr.hidden = true;
+    }
+    document.getElementById("empty").hidden = items.length > 0;
+  }
+
+  function buildNav() {
+    var cats = [];
+    items.forEach(function (i) { if (i.category && cats.indexOf(i.category) < 0) cats.push(i.category); });
+    cats.sort(function (a, b) { return catName(a).localeCompare(catName(b)); });
+    var chips = document.getElementById("chips");
+    cats.forEach(function (c) { chips.appendChild(h("button", { class: "chip", type: "button", "data-cat": c, "aria-pressed": "false", text: catName(c) })); });
+    chips.addEventListener("click", function (e) { var b = e.target.closest(".chip"); if (b) setCat(b.getAttribute("data-cat")); });
+    var nav = document.getElementById("nav");
+    var links = cats.length ? cats.slice(0, 4).map(function (c) { return [catName(c), "#articulos", c]; }) : [[t("items"), "#articulos", ""], [t("how"), "#como-comprar", null]];
+    links.push([t("contact"), "#contacto", null]);
+    links.forEach(function (l) {
+      nav.appendChild(h("a", { href: l[1], text: l[0], onclick: function () { if (l[2] != null) setCat(l[2]); } }));
+    });
+    document.getElementById("hide-sold").addEventListener("change", function (e) { hideSold = e.target.checked; render(); });
+    var q = document.getElementById("q"), qc = document.getElementById("q-clear");
+    function onQuery() { query = q.value; qc.hidden = !query; render(); }
+    q.addEventListener("input", onQuery);
+    q.addEventListener("keydown", function (e) { if (e.key === "Escape" && q.value) { e.preventDefault(); q.value = ""; onQuery(); } if (e.key === "Enter") q.blur(); });
+    qc.addEventListener("click", function () { q.value = ""; onQuery(); q.focus(); });
+    if (q.value) onQuery();
+  }
+
+  // ---- Modal ----
+  var modal = document.getElementById("modal"), current = null, idx = 0;
+  function showPhoto(i) {
+    var pics = (current.photos || []).map(safePhoto).filter(Boolean);
+    var main = document.getElementById("m-main"), th = document.getElementById("m-thumbs");
+    main.replaceChildren(); th.replaceChildren();
+    if (!pics.length) { main.appendChild(h("div", { class: "noimg", style: "position:absolute;inset:0", text: t("soon") })); return; }
+    idx = (i + pics.length) % pics.length;
+    main.appendChild(h("img", { src: pics[idx], alt: t("photo", { t: tr(current, "title"), i: idx + 1, n: pics.length }) }));
+    if (pics.length > 1) {
+      main.appendChild(h("button", { class: "nav-btn prev", type: "button", "aria-label": t("prev"), onclick: function () { showPhoto(idx - 1); } }, [icon("i-left")]));
+      main.appendChild(h("button", { class: "nav-btn next", type: "button", "aria-label": t("next"), onclick: function () { showPhoto(idx + 1); } }, [icon("i-right")]));
+      pics.forEach(function (p, k) {
+        th.appendChild(h("button", { type: "button", "aria-label": t("seePhoto", { i: k + 1 }), "aria-current": String(k === idx), onclick: function () { showPhoto(k); } }, [h("img", { src: p, alt: "" })]));
+      });
+    }
+  }
+  function open(code) {
+    var it = items.filter(function (x) { return x.code === code; })[0];
+    if (!it) return;
+    current = it;
+    var sold = it.status === "vendido", held = it.status === "apartado";
+    document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held ? " · " + t("held") : "");
+    document.getElementById("m-title").textContent = tr(it, "title");
+    document.getElementById("m-price").textContent = money(it.price);
+    var mw = document.getElementById("m-was"), wl = wasLine(it);
+    mw.replaceChildren(); if (wl) mw.appendChild(wl); mw.hidden = !wl;
+    var mo = document.getElementById("m-orig"), ol = origLine(it);
+    mo.replaceChildren(); if (ol) mo.appendChild(ol); mo.hidden = !ol;
+    var msi = document.getElementById("m-msi");
+    msi.replaceChildren(icon("i-card"), h("span", null, [t("msiBox"), h("b", { text: "3 × " + money(it.price / 3) })]));
+    msi.hidden = sold || Number(it.price) > 300000;
+    var cb = document.getElementById("m-cash");
+    cb.replaceChildren(icon("i-cash"), h("span", null, [t("cashBox"), h("b", { text: money(cashPrice(it)) }), h("small", { text: t("cashNote") })]));
+    cb.hidden = sold;
+    var facts = document.getElementById("m-facts");
+    facts.replaceChildren();
+    [[t("fCond"), tr(it, "condition")], [t("fSize"), tr(it, "size")], [t("fBrand"), it.brand], [t("fPickup"), CONFIG.pickup || "CDMX"], [t("fShip"), t("ship")]].forEach(function (f) {
+      if (f[1]) { facts.appendChild(h("dt", { text: f[0] })); facts.appendChild(h("dd", { text: f[1] })); }
+    });
+    var desc = document.getElementById("m-desc");
+    desc.textContent = tr(it, "description") || ""; desc.hidden = !it.description;
+    var acts = document.getElementById("m-actions");
+    acts.replaceChildren();
+    if (!sold && !held) {
+      var L = it.links || {}, deliv = Number(it.delivery) || 0;
+      // Cards top out at $300,000 per payment on Mercado Pago, so big items carry a plan of several links that add up to the price.
+      var plan = planOf(it);
+      if (plan.length) {
+        var pst = planLeft(plan);
+        // One "pay by card / MSI" button; tapping it opens the list of part payments.
+        acts.appendChild(h("details", { class: "plan" }, [
+          h("summary", { class: "btn mp" }, [
+            h("span", null, [t("payWith"), h("img", { class: "mplogo", src: ROOT + "brand/mercadopago-color-horizontal.svg", alt: "Mercado Pago" }), " " + t("planBtn", { n: plan.length }),
+              h("span", { class: "sub2", text: leftText(pst) })]),
+            h("span", { class: "amt", style: "display:inline-flex;align-items:center;gap:6px" }, [money(it.price), icon("i-chev", "chev")])
+          ]),
+          h("div", { class: "plan-body" }, [
+            h("h3", { text: t("planH", { n: plan.length }) }),
+            h("p", { text: t("planP", { n: plan.length, total: money(it.price) }) }),
+            h("p", { class: "left", text: t("progress", { done: pst.done, n: pst.n }) + " · " + leftText(pst) }),
+            h("div", { class: "bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(pst.n), "aria-valuenow": String(pst.done), "aria-label": t("progress", { done: pst.done, n: pst.n }) },
+              [h("i", { style: "width:" + Math.round(pst.done / pst.n * 100) + "%" })]),
+            h("ol", null, plan.map(function (p, k) {
+              var label = t("planI", { i: k + 1, n: plan.length });
+              if (p.paid) return h("li", null, [h("div", { class: "done" }, [h("span", { text: label }), h("b", { text: money(p.amount) }), h("em", { text: t("paidMark") })])]);
+              return h("li", null, [h("a", { href: safeUrl(p.url), target: "_blank", rel: "noopener" }, [h("span", { text: label }), h("b", { text: money(p.amount) })])]);
+            }))
+          ])
+        ]));
+        // The one-shot SPEI link is for the full price, so it only makes sense while no part has been paid.
+        if (safeUrl(L.pickup) && pst.done === 0) acts.appendChild(mpBtn("alt", t("payAll"), money(it.price), safeUrl(L.pickup)));
+      } else if (safeUrl(L.pickup)) acts.appendChild(mpBtn("", t("payPickup"), money(it.price), safeUrl(L.pickup)));
+      if (safeUrl(L.delivery) && deliv > 0) acts.appendChild(mpBtn("alt", t("payDeliv"), money(it.price + deliv), safeUrl(L.delivery)));
+    }
+    var msg = sold ? t("waSold", { code: it.code, title: tr(it, "title") }) : t("waOffer", { code: it.code, title: tr(it, "title"), price: money(it.price) });
+    acts.appendChild(waBtn(sold ? t("btnSold") : t("btnOffer"), waLink(msg)));
+    showPhoto(0);
+    // Show the item's own link (…/i/MV-90/) in the address bar: it's the link that previews nicely when shared.
+    if (location.href !== itemUrl(it.code)) history.replaceState(null, "", itemUrl(it.code));
+    document.getElementById("lang").href = itemUrl(it.code, OTHER);
+    if (!modal.open) modal.showModal();
+    modal.focus({ preventScroll: true });
+    modal.querySelector(".m").scrollTop = 0; modal.querySelector(".info").scrollTop = 0;
+  }
+  function close() { if (modal.open) modal.close(); }
+  modal.addEventListener("close", function () { current = null; if (location.href !== PAGE) history.replaceState(null, "", PAGE); document.getElementById("lang").href = OTHER; });
+  modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  document.getElementById("m-close").addEventListener("click", close);
+  document.getElementById("m-close2").addEventListener("click", close);
+  document.addEventListener("keydown", function (e) {
+    if (!modal.open || !current) return;
+    if (e.key === "ArrowLeft") showPhoto(idx - 1);
+    if (e.key === "ArrowRight") showPhoto(idx + 1);
+  });
+  document.getElementById("m-share").addEventListener("click", function (e) {
+    // Share the item's own page (i/<CODE>/) so WhatsApp / iMessage show its photo and title, not the site's.
+    var b = e.currentTarget, url = current ? itemUrl(current.code) : PAGE;
+    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () {
+      b.textContent = t("copied"); setTimeout(function () { b.textContent = t("copy"); }, 2000);
+    }).catch(function () { b.textContent = url; });
+  });
+  window.addEventListener("hashchange", function () { var c = location.hash.slice(1); if (/^MV/.test(c)) open(c); else if (!c) close(); });
+
+  fetch(ROOT + "items.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (data) {
+    items = (Array.isArray(data) ? data : []).filter(function (i) { return i && i.code && i.title && Number(i.price) > 0; });
+    // "featured" items go first (e.g. MV-90), then available before sold, then by code.
+    items.sort(function (a, b) { return (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || (a.status === "vendido") - (b.status === "vendido") || String(a.code).localeCompare(String(b.code)); });
+    buildNav(); render();
+    var c = location.hash.slice(1); if (/^MV/.test(c)) open(c);
+  }).catch(function () { buildNav(); render(); });
+})();
+</script>
+</body>
+</html>
