@@ -50,17 +50,42 @@
   }
  },
  {
+  "code": "MV-18",
+  "title": "Aire portátil Mirage X-One 14,000 BTU frío/calor",
+  "price": 4700,
+  "originalPrice": 12400,
+  "cashPrice": 4500,
+  "delivery": 0,
+  "category": "Electrodomésticos",
+  "condition": "Buen estado",
+  "size": "47 x 39 x 77 cm",
+  "brand": "Mirage",
+  "description": "Aire acondicionado portátil Mirage X-One MAPS1411H, 14,000 BTU, frío y calor, con deshumidificador. Incluye los accesorios de instalación de BeGrand necesarios para sacar el aire por la ventana, además de la manguera de salida y el control remoto. Funciona perfecto.",
+  "photos": [
+   "images/mv-18-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-0b74bbf9-9b8e-4679-92c6-b4a9cc51dd8f"
+  },
+  "en": {
+   "title": "Mirage X-One 14,000 BTU portable AC, cool/heat",
+   "description": "Mirage X-One MAPS1411H portable air conditioner, 14,000 BTU, cooling and heating, with dehumidifier. Includes the BeGrand installation parts needed to vent the air out the window, plus the exhaust hose and remote. Works perfectly.",
+   "size": "47 x 39 x 77 cm"
+  }
+ },
+ {
   "code": "MV-21",
-  "title": "Bicicleta eléctrica VanMoof S3 – urbana, con app",
+  "title": "Bicicleta eléctrica VanMoof S3 – hasta 32 km/h, con app",
   "price": 21900,
   "originalPrice": 42800,
   "cashPrice": 21000,
   "delivery": 0,
   "category": "Movilidad",
-  "condition": "Buen estado",
+  "condition": "Excelente estado",
   "size": "180 x 65 x 100 cm",
   "brand": "VanMoof",
-  "description": "Bicicleta eléctrica VanMoof S3 color gris oscuro, batería integrada, cambios automáticos, frenos de disco hidráulicos, candado y luces integrados. En buen estado general. A considerar: marca el código de error 44 (común en las S3) y los botones de claxon y boost se dañaron en un mantenimiento; ambas funciones se usan desde la app de VanMoof. Se entrega con cargador y transferencia de la cuenta/llave digital.",
+  "description": "Bicicleta eléctrica VanMoof S3 color gris oscuro. Asistencia eléctrica hasta 32 km/h, batería integrada, 4 cambios automáticos, frenos de disco hidráulicos, botón Turbo Boost, candado Kick Lock, luces y pantalla integradas en el cuadro, alarma y rastreo antirrobo desde la app. En excelente estado: mantenimiento hace unos 3 meses y solo detalles cosméticos mínimos, casi imperceptibles. A considerar: marca el código de error 44 (común en las S3) y los botones de claxon y boost se dañaron en un mantenimiento; ambas funciones se usan desde la app de VanMoof. Se entrega con cargador y transferencia de la cuenta/llave digital.",
   "photos": [
    "images/mv-21-1.jpg"
   ],
@@ -69,9 +94,10 @@
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-4e85deab-d10e-4104-ad20-67487f9eb952"
   },
   "en": {
-   "title": "VanMoof S3 electric bike – city bike with app",
-   "description": "Dark gray VanMoof S3 e-bike: integrated battery, automatic shifting, hydraulic disc brakes, built-in lock and lights. Good overall condition. Note: it shows error code 44 (common on the S3), and the horn and boost buttons were damaged during a service; both functions work from the VanMoof app. Comes with charger and transfer of the account / digital key.",
-   "size": "180 x 65 x 100 cm"
+   "title": "VanMoof S3 electric bike – up to 32 km/h, with app",
+   "description": "Dark gray VanMoof S3 e-bike. Pedal assist up to 32 km/h, integrated battery, 4-speed automatic shifting, hydraulic disc brakes, Turbo Boost button, Kick Lock, lights and display built into the frame, alarm and anti-theft tracking from the app. Excellent condition: serviced about 3 months ago, with only tiny, barely visible cosmetic marks. Note: it shows error code 44 (common on the S3), and the horn and boost buttons were damaged during a service; both functions work from the VanMoof app. Comes with charger and transfer of the account / digital key.",
+   "size": "180 x 65 x 100 cm",
+   "condition": "Excellent condition"
   }
  },
  {
