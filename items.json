@@ -37,7 +37,8 @@
   "brand": "LG",
   "description": "Pantalla LG UHD de 75 pulgadas, modelo 75UN8000PUB: 4K, Smart TV con webOS y ThinQ AI. Funciona perfectamente. Se entrega con control remoto y cable de corriente; se desmonta de la pared para la entrega.",
   "photos": [
-   "images/mv-05-1.jpg"
+   "images/mv-05-1.jpg",
+   "images/mv-05-2.jpg"
   ],
   "status": "disponible",
   "links": {
@@ -228,7 +229,7 @@
  },
  {
   "code": "MV-78",
-  "title": "Ficus lyrata (hoja de violín) natural con maceta",
+  "title": "2 Ficus lyrata (hoja de violín) naturales con maceta · $1,050 c/u",
   "price": 1050,
   "originalPrice": 2500,
   "cashPrice": 1050,
@@ -237,19 +238,24 @@
   "condition": "Buen estado",
   "size": "2.3 m y 1.7 m de alto",
   "brand": "",
-  "description": "Ficus lyrata (pandurata/hoja de violín) natural con maceta de cemento blanca. Hay 2: una de aprox. 2.3 m y otra de aprox. 1.7 m de alto, ambas sanas. Precio por planta. Ideal para esquinas con buena luz.",
+  "description": "Hay 2 Ficus lyrata (pandurata/hoja de violín) naturales, cada uno con su maceta de cemento blanca: uno de aprox. 2.3 m y otro de aprox. 1.7 m de alto, ambos sanos. Precio por planta ($1,050 c/u); puedes llevarte uno o los dos. Ideal para esquinas con buena luz.",
   "photos": [
-   "images/mv-78-1.jpg"
+   "images/mv-78-2.jpg",
+   "images/mv-78-1.jpg",
+   "images/mv-78-3.jpg"
   ],
   "status": "disponible",
   "links": {
-   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-c0833161-91b5-49f9-ae15-92bcc14ef1ad"
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-c0833161-91b5-49f9-ae15-92bcc14ef1ad",
+   "all": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-407ceeef-d294-4ddf-ad54-6dfabe84e58d"
   },
   "en": {
-   "title": "Fiddle-leaf fig (Ficus lyrata), real, with pot",
-   "description": "Real fiddle-leaf fig (Ficus lyrata) in a white cement pot. There are 2: one about 2.3 m and one about 1.7 m tall, both healthy. Price is per plant. Great for bright corners.",
+   "title": "2 real fiddle-leaf figs (Ficus lyrata) with pots · $1,050 each",
+   "description": "There are 2 real fiddle-leaf figs (Ficus lyrata / pandurata), each in its white cement pot: one about 2.3 m and one about 1.7 m tall, both healthy. Price is per plant ($1,050 each); take one or both. Great for a bright corner.",
    "size": "2.3 m and 1.7 m tall"
-  }
+  },
+  "qty": 2,
+  "allPrice": 2100
  },
  {
   "code": "MV-79",
