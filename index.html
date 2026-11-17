@@ -786,7 +786,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       if (safeUrl(L.delivery) && deliv > 0) acts.appendChild(mpBtn("alt", t("payDeliv"), money(it.price + deliv), safeUrl(L.delivery)));
       // BBVA (Openpay) pay link — used in place of Mercado Pago for a specific accepted offer; stays active even when offer locks MP.
       if (safeUrl(L.bbva)) acts.appendChild(bbvaBtn(t("payPickup"), money(it.price), safeUrl(L.bbva)));
-      if (offer && CONFIG.offerLocksPay) {
+      if (offer && (CONFIG.offerLocksPay || it.lockPay)) {
         acts.querySelectorAll("a.btn.mp, details.plan").forEach(lockBtn);
         if (!safeUrl(L.bbva)) acts.prepend(h("p", { class: "locknote", text: t("offerNote") }));
       }
