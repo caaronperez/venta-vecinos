@@ -219,7 +219,7 @@
   "photos": [
    "images/mv-19-1.jpg"
   ],
-  "status": "disponible",
+  "status": "vendido",
   "links": {
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-85ab8435-3b1f-4af5-8b47-707171da9695"
   },
@@ -578,7 +578,7 @@
   "photos": [
    "images/mv-76-1.jpg"
   ],
-  "status": "oferta",
+  "status": "vendido",
   "links": {
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-d6d1ec21-d0d1-4410-9c8a-955ad3099906"
   },
@@ -603,7 +603,7 @@
   "photos": [
    "images/mv-77-1.jpg"
   ],
-  "status": "oferta",
+  "status": "vendido",
   "links": {
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-692efaed-5d2d-4c3f-bc16-a4f7efb43175"
   },
@@ -1148,6 +1148,157 @@
    "size": "Full/double (matrimonial)",
    "condition": "Like new",
    "description": "Full/double (matrimonial) mattress with its box spring. I bought it 6 months ago at Costco for $12,000 and it was in the guest room, so it has very little use. The headboard in the photo is sold separately (MV-93)."
+  }
+ },
+ {
+  "code": "MV-07",
+  "title": "Tocadiscos Sony PS-LX310BT Bluetooth automático",
+  "price": 2300,
+  "originalPrice": 4200,
+  "cashPrice": 2300,
+  "delivery": 0,
+  "category": "Electrónica",
+  "condition": "Como nuevo",
+  "size": "43 x 37 x 11 cm",
+  "brand": "Sony",
+  "description": "Tocadiscos Sony PS-LX310BT con Bluetooth, automático, con preamplificador integrado y tapa acrílica. Funciona perfecto; se conecta a bocinas o audífonos Bluetooth. Incluye eliminador.",
+  "photos": [
+   "images/mv-07-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-c3719e68-5733-429c-9eb5-d84eadb559e4"
+  },
+  "en": {
+   "title": "Sony PS-LX310BT automatic Bluetooth turntable",
+   "description": "Sony PS-LX310BT automatic turntable with Bluetooth, built-in preamp and acrylic dust cover. Works perfectly; pairs with Bluetooth speakers or headphones. Power adapter included.",
+   "size": "43 x 37 x 11 cm"
+  }
+ },
+ {
+  "code": "MV-10",
+  "title": "Lámpara de esquina LED RGB con control y app WiFi",
+  "price": 240,
+  "originalPrice": 530,
+  "cashPrice": 240,
+  "delivery": 0,
+  "category": "Iluminación",
+  "condition": "Buen estado",
+  "size": "Alto 150 cm",
+  "brand": "",
+  "description": "Lámpara de pie LED RGB para esquina, cambia de colores, con control remoto y app WiFi. Altura aprox. 150 cm. Funciona perfecto.",
+  "photos": [
+   "images/mv-10-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-31288fce-6488-4559-b8f8-6dcecbcda264"
+  },
+  "en": {
+   "title": "RGB LED corner lamp with remote and Wi-Fi app",
+   "description": "Color-changing RGB LED corner floor lamp with remote control and Wi-Fi app. About 150 cm tall. Works perfectly.",
+   "size": "150 cm tall"
+  },
+  "wasPrice": 270
+ },
+ {
+  "code": "MV-13",
+  "title": "Espejo de cuerpo completo en arco Antok 180 x 71 cm",
+  "price": 1260,
+  "originalPrice": 3438,
+  "cashPrice": 1260,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "180 x 71 cm",
+  "brand": "Antok",
+  "description": "Espejo de cuerpo completo Antok en forma de arco, 180 x 71 cm, con marco delgado de aluminio y vidrio HD con respaldo de seguridad. Se puede colgar o recargar en la pared. En buen estado, sin manchas ni despostilladuras.",
+  "photos": [
+   "images/mv-13-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-cb38bf2b-bc49-4db4-ade8-73322c0eb846"
+  },
+  "en": {
+   "title": "Antok arched full-length mirror 180 x 71 cm",
+   "description": "Antok arched full-length mirror, 180 x 71 cm, thin aluminum frame and HD glass with safety backing. Hang it or lean it against the wall. Good condition, no spots or chips.",
+   "size": "180 x 71 cm"
+  }
+ },
+ {
+  "code": "MV-38",
+  "title": "Freidora de aire Instant Vortex 6 qt (5.7 L)",
+  "price": 630,
+  "originalPrice": 1925,
+  "cashPrice": 630,
+  "delivery": 0,
+  "category": "Cocina",
+  "condition": "Buen estado",
+  "size": "5.7 L",
+  "brand": "Instant",
+  "description": "Freidora de aire Instant Vortex de 6 cuartos (5.7 L) en color negro, con panel digital y canasta antiadherente. Funciona perfectamente y está en buen estado.",
+  "photos": [
+   "images/mv-38-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-3a7cedc6-ddb1-40ea-bda0-9f3caba72e40"
+  },
+  "en": {
+   "title": "Instant Vortex 6 qt (5.7 L) air fryer",
+   "description": "Black Instant Vortex 6-quart (5.7 L) air fryer with digital panel and nonstick basket. Works perfectly, good condition.",
+   "size": "5.7 L"
+  }
+ },
+ {
+  "code": "MV-49",
+  "title": "Bote de basura chico con pedal, color crema",
+  "price": 60,
+  "originalPrice": 0,
+  "cashPrice": 60,
+  "delivery": 0,
+  "category": "Hogar",
+  "condition": "Buen estado",
+  "size": "3–5 L",
+  "brand": "",
+  "description": "Bote de basura pequeño con pedal, color crema con base negra, ideal para baño o recámara. Usado, funciona bien.",
+  "photos": [
+   "images/mv-49-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-127919b1-22f5-40d7-870f-16c00372e379"
+  },
+  "en": {
+   "title": "Small cream pedal trash can",
+   "description": "Small cream pedal trash can with a black base, great for a bathroom or bedroom. Used, works well.",
+   "size": "3–5 L"
+  }
+ },
+ {
+  "code": "MV-56",
+  "title": "Espejo de cuerpo completo arco marco negro",
+  "price": 580,
+  "originalPrice": 949,
+  "cashPrice": 580,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "50 x 145 cm aprox.",
+  "brand": "",
+  "description": "Espejo de cuerpo completo con forma de arco y marco metálico negro, aprox. 50x145 cm. En buen estado, sin manchas ni despostilladuras.",
+  "photos": [
+   "images/mv-56-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-bd2680fd-7ec2-4453-a165-4b881cae293c"
+  },
+  "en": {
+   "title": "Arched full-length mirror, black frame",
+   "description": "Arched full-length mirror with a black metal frame, about 50 x 145 cm. Good condition, no spots or chips.",
+   "size": "About 50 x 145 cm"
   }
  }
 ]
