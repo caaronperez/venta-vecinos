@@ -219,7 +219,7 @@
   "photos": [
    "images/mv-76-1.jpg"
   ],
-  "status": "disponible",
+  "status": "oferta",
   "links": {
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-d6d1ec21-d0d1-4410-9c8a-955ad3099906"
   },
@@ -244,7 +244,7 @@
   "photos": [
    "images/mv-77-1.jpg"
   ],
-  "status": "disponible",
+  "status": "oferta",
   "links": {
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-692efaed-5d2d-4c3f-bc16-a4f7efb43175"
   },

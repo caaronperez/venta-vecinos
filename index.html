@@ -398,7 +398,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       fine: "Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.",
       daysLeft: "Hasta el 25 de noviembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
       waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
-      sold: "Vendido", held: "Apartado", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
+      sold: "Vendido", held: "Apartado", offer: "Oferta en proceso", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
       orMsi: "o 3 × {amt} sin intereses", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
@@ -429,7 +429,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
       fine: "Pay with Mercado Pago and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.",
       daysLeft: "Until November 25 · {n} days left", lastDay: "Last day", lastItems: "Last items",
       waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
-      sold: "Sold", held: "On hold", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
+      sold: "Sold", held: "On hold", offer: "Offer pending", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
       orMsi: "or 3 × {amt} interest-free", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
@@ -495,6 +495,9 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var u = document.createElementNS("http://www.w3.org/2000/svg", "use"); u.setAttribute("href", "#" + id); s.appendChild(u);
     return s;
   }
+  // "apartado" = reserved; "oferta" = an offer is being worked out (not sold yet). Both hide the pay buttons.
+  function isHeld(it) { return it.status === "apartado" || it.status === "oferta"; }
+  function heldLabel(it) { return it.status === "oferta" ? t("offer") : t("held"); }
   function cashPrice(it) {
     if (Number(it.cashPrice) > 0) return Number(it.cashPrice);
     var p = Number(it.price) || 0;
@@ -550,9 +553,9 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var code = String(it.code || "");
     var prices = [it.price, cashPrice(it), it.originalPrice].filter(function (n) { return Number(n) > 0; })
       .map(function (n) { n = Math.round(Number(n)); return n + " $" + n + " " + n.toLocaleString("es-MX"); });
-    var st = it.status === "vendido" ? "vendido" : it.status === "apartado" ? "apartado" : "disponible";
+    var st = it.status === "vendido" ? "vendido" : it.status === "apartado" ? "apartado" : it.status === "oferta" ? "oferta en proceso" : "disponible";
     var en = it.en && typeof it.en === "object" ? it.en : {};
-    var stEn = st === "vendido" ? "sold" : st === "apartado" ? "on hold" : "available";
+    var stEn = st === "vendido" ? "sold" : st === "apartado" ? "on hold" : it.status === "oferta" ? "offer pending" : "available";
     it._hay = fold([code, code.replace(/[^a-z0-9]/gi, ""), code.replace(/^MV-0?/i, ""), it.title, it.description, it.category, it.condition, it.size, it.brand, st, prices.join(" "),
       en.title, en.description, en.size, en.condition, CAT_EN[it.category], COND_EN[it.condition], stEn].join(" \n "));
     return it._hay;
@@ -571,11 +574,11 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var list = items.filter(function (it) { return (!cat || it.category === cat) && (!hideSold || it.status !== "vendido") && (!ts.length || matches(it, ts)); });
     grid.replaceChildren();
     list.forEach(function (it) {
-      var sold = it.status === "vendido", held = it.status === "apartado";
+      var sold = it.status === "vendido", held = isHeld(it);
       var pic = (it.photos || []).map(safePhoto).filter(Boolean)[0];
       var ph = h("div", { class: "ph" }, [
         pic ? h("img", { src: pic, alt: tr(it, "title"), loading: "lazy" }) : h("div", { class: "noimg", text: t("soon") }),
-        sold ? h("span", { class: "badge sold", text: t("sold") }) : held ? h("span", { class: "badge", text: t("held") }) : wasLine(it) ? h("span", { class: "badge deal", text: t("deal") }) : null,
+        sold ? h("span", { class: "badge sold", text: t("sold") }) : held ? h("span", { class: "badge", text: heldLabel(it) }) : wasLine(it) ? h("span", { class: "badge deal", text: t("deal") }) : null,
         sold ? null : h("span", { class: "msi-tag", text: t("msiTag") })
       ]);
       var meta = h("div", { class: "meta" }, [
@@ -651,8 +654,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     var it = items.filter(function (x) { return x.code === code; })[0];
     if (!it) return;
     current = it;
-    var sold = it.status === "vendido", held = it.status === "apartado";
-    document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held ? " · " + t("held") : "");
+    var sold = it.status === "vendido", held = isHeld(it);
+    document.getElementById("m-code").textContent = it.code + (it.category ? " · " + catName(it.category) : "") + (sold ? " · " + t("sold") : held ? " · " + heldLabel(it) : "");
     document.getElementById("m-title").textContent = tr(it, "title");
     document.getElementById("m-price").textContent = money(it.price);
     var mw = document.getElementById("m-was"), wl = wasLine(it);
