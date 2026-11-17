@@ -104,6 +104,57 @@
   }
  },
  {
+  "code": "MV-16",
+  "title": "Mueble de cubos negro (mesa lateral junto al sofá)",
+  "price": 250,
+  "originalPrice": 0,
+  "cashPrice": 250,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "Cubos de aprox. 35 x 30 x 35 cm",
+  "brand": "",
+  "description": "Mueble organizador de cubos en color negro; lo uso como mesa lateral junto al sofá, con espacio para guardar abajo. Buen estado. Las cajas de tela no se incluyen: se venden aparte en MV-17.",
+  "photos": [
+   "images/mv-16-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-fbb9644b-5c16-4786-8bc4-4c1d99be076f"
+  },
+  "en": {
+   "title": "Black cube storage unit (side table by the sofa)",
+   "description": "Black cube storage unit; I use it as a side table next to the sofa, with storage space below. Good condition. The fabric bins aren't included: they're sold separately as MV-17.",
+   "size": "Cubes about 35 x 30 x 35 cm",
+   "condition": "Good condition"
+  }
+ },
+ {
+  "code": "MV-17",
+  "title": "6 cajas organizadoras de tela negras",
+  "price": 170,
+  "originalPrice": 600,
+  "cashPrice": 170,
+  "delivery": 0,
+  "category": "Organización",
+  "condition": "Buen estado",
+  "size": "27 x 27 x 28 cm",
+  "brand": "",
+  "description": "Juego de 6 cajas organizadoras plegables de tela negra con asa metálica. Aprox. 27 x 27 x 28 cm cada una. Buen estado; ideales para muebles de cubos (como el MV-16).",
+  "photos": [
+   "images/mv-17-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-a61813f3-4675-4ea2-aa73-51bd7c55375c"
+  },
+  "en": {
+   "title": "6 black fabric storage bins",
+   "description": "Set of 6 foldable black fabric storage bins with metal handles. About 27 x 27 x 28 cm each. Good condition; made for cube storage units (like MV-16).",
+   "size": "27 x 27 x 28 cm"
+  }
+ },
+ {
   "code": "MV-15",
   "title": "Fuente de agua de piedra volcánica con plantas",
   "price": 580,
