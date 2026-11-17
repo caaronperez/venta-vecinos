@@ -468,7 +468,7 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
     return v ? s.replace(/\{(\w+)\}/g, function (m, x) { return v[x] != null ? String(v[x]) : m; }) : s;
   }
   var CAT_EN = { "Cocina": "Kitchen", "Decoración": "Decor", "Electrodomésticos": "Appliances", "Electrónica": "Electronics", "Hogar": "Home",
-    "Iluminación": "Lighting", "Mascotas": "Pets", "Movilidad": "Mobility", "Muebles": "Furniture", "Organización": "Storage", "Recámara": "Bedroom" };
+    "Iluminación": "Lighting", "Juegos": "Games", "Mascotas": "Pets", "Movilidad": "Mobility", "Muebles": "Furniture", "Organización": "Storage", "Recámara": "Bedroom" };
   var COND_EN = { "Nuevo": "New", "Como nuevo": "Like new", "Buen estado": "Good condition", "Con detalles de uso": "Shows some wear" };
   // Split payments (items over the card limit): parts in items.json paymentPlan, each marked "paid" by tools/sync.py parts.
   function planOf(it) { return (Array.isArray(it.paymentPlan) ? it.paymentPlan : []).filter(function (p) { return p && safeUrl(p.url) && Number(p.amount) > 0; }); }

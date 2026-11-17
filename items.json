@@ -749,5 +749,328 @@
    "size": "55 cm tall x 75 cm wide",
    "description": "Large real aloe vera plant, about 55 cm tall and 75 cm wide. Comes in a cream textured ceramic pot. Very easy to care for."
   }
+ },
+ {
+  "code": "MV-61",
+  "title": "Espejo redondo IKEA STOCKHOLM 80 cm marco roble",
+  "price": 1260,
+  "originalPrice": 2499,
+  "cashPrice": 1260,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "Ø 80 cm",
+  "brand": "IKEA",
+  "description": "Espejo redondo IKEA STOCKHOLM de 80 cm con marco de chapa de roble. En muy buen estado; actualmente cuesta $2,499 nuevo.",
+  "photos": [
+   "images/mv-61-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-becdbfb8-3508-4759-a40b-03c48511d6de"
+  },
+  "en": {
+   "title": "IKEA STOCKHOLM 80 cm round mirror, oak frame",
+   "description": "IKEA STOCKHOLM 80 cm round mirror with oak veneer frame. Very good condition; it currently costs $2,499 new.",
+   "size": "Ø 80 cm"
+  }
+ },
+ {
+  "code": "MV-95",
+  "title": "Figura Cleopatra sentada en esfinge, acabado bronce",
+  "price": 530,
+  "originalPrice": 0,
+  "cashPrice": 530,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "Aprox. 25 cm de largo",
+  "brand": "",
+  "description": "Escultura decorativa de Cleopatra sentada sobre una esfinge, de resina con acabado tipo bronce y detalles pintados a mano (tocado, collar). Base con jeroglíficos. En buen estado. Tengo otra figura egipcia (faraón en carro, MV-96).",
+  "photos": [
+   "images/mv-95-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-26c76054-6789-4cf8-afd8-bdab2985bef9"
+  },
+  "en": {
+   "title": "Cleopatra seated on a sphinx figure, bronze finish",
+   "size": "About 25 cm long",
+   "condition": "Good condition",
+   "description": "Decorative sculpture of Cleopatra seated on a sphinx, cold-cast resin with a bronze-look finish and hand-painted details (headdress, collar). Base with hieroglyphs. Good condition. I also have another Egyptian figure (pharaoh on a chariot, MV-96)."
+  }
+ },
+ {
+  "code": "MV-96",
+  "title": "Figura faraón arquero en carro egipcio, acabado bronce",
+  "price": 530,
+  "originalPrice": 0,
+  "cashPrice": 530,
+  "delivery": 0,
+  "category": "Decoración",
+  "condition": "Buen estado",
+  "size": "Aprox. 35 cm de largo",
+  "brand": "",
+  "description": "Escultura decorativa de un faraón arquero en carro de guerra tirado por caballo con penacho, de resina con acabado tipo bronce y detalles en azul y dorado. En buen estado. Tengo otra figura egipcia (Cleopatra en esfinge, MV-95).",
+  "photos": [
+   "images/mv-96-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-806da217-92b0-40cb-aac1-cb443d07cf63"
+  },
+  "en": {
+   "title": "Pharaoh archer on an Egyptian chariot figure, bronze finish",
+   "size": "About 35 cm long",
+   "condition": "Good condition",
+   "description": "Decorative sculpture of a pharaoh archer on a horse-drawn war chariot with a plumed horse, cold-cast resin with a bronze-look finish and blue and gold details. Good condition. I also have another Egyptian figure (Cleopatra on a sphinx, MV-95)."
+  }
+ },
+ {
+  "code": "MV-97",
+  "title": "Robot aspiradora iRobot Roomba serie 600",
+  "price": 1260,
+  "originalPrice": 0,
+  "cashPrice": 1260,
+  "delivery": 0,
+  "category": "Electrodomésticos",
+  "condition": "Usado, funciona",
+  "size": "34 cm de diámetro",
+  "brand": "iRobot",
+  "description": "Robot aspiradora iRobot Roomba serie 600 en color plata. Funciona: botones CLEAN, SPOT y DOCK; regresa solo a su base a cargar. Con marcas normales de uso en la cubierta.",
+  "photos": [
+   "images/mv-97-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-c9ea6d77-7959-4529-87bb-ab4c3b9255ea"
+  },
+  "en": {
+   "title": "iRobot Roomba 600 series robot vacuum",
+   "size": "34 cm diameter",
+   "condition": "Used, works",
+   "description": "iRobot Roomba 600 series robot vacuum in silver. Works: CLEAN, SPOT and DOCK buttons; goes back to its base on its own to charge. Normal signs of use on the top cover."
+  }
+ },
+ {
+  "code": "MV-98",
+  "title": "Juego Torre de Beber (Novelty)",
+  "price": 220,
+  "originalPrice": 0,
+  "cashPrice": 220,
+  "delivery": 0,
+  "category": "Juegos",
+  "condition": "Buen estado",
+  "size": "Caja estándar",
+  "brand": "Novelty",
+  "description": "Juego para fiestas Torre de Beber de Novelty: torre de bloques con retos para tomar. En su caja, buen estado. También vendo UNO Party!, Mejor/Peor Amig@, Exploding Kittens Party Pack y Cards Against Humanity.",
+  "photos": [
+   "images/mv-98-1.jpg",
+   "images/mv-98-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-ada3699d-7a08-4bc1-b856-bd9b67e19e84"
+  },
+  "en": {
+   "title": "Torre de Beber drinking tower game (Novelty)",
+   "size": "Standard box",
+   "condition": "Good condition",
+   "description": "Torre de Beber party game by Novelty: a block tower with drinking challenges (Spanish edition). In its box, good condition. I'm also selling UNO Party!, Mejor/Peor Amig@, Exploding Kittens Party Pack and Cards Against Humanity."
+  }
+ },
+ {
+  "code": "MV-99",
+  "title": "Juego de cartas UNO Party! (Mattel)",
+  "price": 200,
+  "originalPrice": 0,
+  "cashPrice": 200,
+  "delivery": 0,
+  "category": "Juegos",
+  "condition": "Buen estado, caja con cinta",
+  "size": "Para 6 a 16 jugadores",
+  "brand": "Mattel",
+  "description": "UNO Party! de Mattel, la versión para grupos grandes (6 a 16 jugadores). Cartas en buen estado; la caja tiene un pedazo de cinta. También vendo Torre de Beber, Mejor/Peor Amig@, Exploding Kittens Party Pack y Cards Against Humanity.",
+  "photos": [
+   "images/mv-99-1.jpg",
+   "images/mv-99-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-ae57a152-db15-4b4b-a941-e9d7b8b2e907"
+  },
+  "en": {
+   "title": "UNO Party! card game (Mattel)",
+   "size": "For 6 to 16 players",
+   "condition": "Good condition, tape on the box",
+   "description": "UNO Party! by Mattel, the big-group version (6 to 16 players). Cards in good condition; the box has a piece of tape on it. I'm also selling Torre de Beber, Mejor/Peor Amig@, Exploding Kittens Party Pack and Cards Against Humanity."
+  }
+ },
+ {
+  "code": "MV-100",
+  "title": "Juego Mejor/Peor Amig@ (Novelty)",
+  "price": 220,
+  "originalPrice": 0,
+  "cashPrice": 220,
+  "delivery": 0,
+  "category": "Juegos",
+  "condition": "Buen estado",
+  "size": "Caja estándar",
+  "brand": "Novelty",
+  "description": "Juego de preguntas Mejor/Peor Amig@ de Novelty: verdades incómodas y suposiciones atrevidas para descubrir qué tanto se conocen. En su caja, buen estado. También vendo Torre de Beber, UNO Party!, Exploding Kittens Party Pack y Cards Against Humanity.",
+  "photos": [
+   "images/mv-100-1.jpg",
+   "images/mv-100-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-505ac421-cb35-4749-967e-b238ec50f6ab"
+  },
+  "en": {
+   "title": "Mejor/Peor Amig@ party game (Novelty)",
+   "size": "Standard box",
+   "condition": "Good condition",
+   "description": "Mejor/Peor Amig@ (best/worst friend) question game by Novelty, Spanish edition: awkward truths and bold guesses to find out how well you know each other. In its box, good condition. I'm also selling Torre de Beber, UNO Party!, Exploding Kittens Party Pack and Cards Against Humanity."
+  }
+ },
+ {
+  "code": "MV-101",
+  "title": "Exploding Kittens Party Pack (2 a 10 jugadores)",
+  "price": 370,
+  "originalPrice": 0,
+  "cashPrice": 370,
+  "delivery": 0,
+  "category": "Juegos",
+  "condition": "Buen estado",
+  "size": "Para 2 a 10 jugadores",
+  "brand": "Exploding Kittens",
+  "description": "Exploding Kittens edición Party Pack, para 2 a 10 jugadores. En su caja, buen estado. También vendo Torre de Beber, UNO Party!, Mejor/Peor Amig@ y Cards Against Humanity.",
+  "photos": [
+   "images/mv-101-1.jpg",
+   "images/mv-101-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-a33d0c05-9485-4e65-8e43-a0ce535a3ac8"
+  },
+  "en": {
+   "title": "Exploding Kittens Party Pack (2 to 10 players)",
+   "size": "For 2 to 10 players",
+   "condition": "Good condition",
+   "description": "Exploding Kittens Party Pack edition, for 2 to 10 players. In its box, good condition. I'm also selling Torre de Beber, UNO Party!, Mejor/Peor Amig@ and Cards Against Humanity."
+  }
+ },
+ {
+  "code": "MV-102",
+  "title": "Cards Against Humanity (en inglés)",
+  "price": 430,
+  "originalPrice": 0,
+  "cashPrice": 430,
+  "delivery": 0,
+  "category": "Juegos",
+  "condition": "Buen estado",
+  "size": "Para 4 a 20+ jugadores",
+  "brand": "Cards Against Humanity",
+  "description": "Cards Against Humanity, el juego de fiesta para adultos (17+), en inglés, para 4 a 20+ jugadores. En su caja, buen estado. También vendo Torre de Beber, UNO Party!, Mejor/Peor Amig@ y Exploding Kittens Party Pack.",
+  "photos": [
+   "images/mv-102-1.jpg",
+   "images/mv-102-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-57bcac6f-b430-4888-93e1-b267b22e731a"
+  },
+  "en": {
+   "title": "Cards Against Humanity",
+   "size": "For 4 to 20+ players",
+   "condition": "Good condition",
+   "description": "Cards Against Humanity, the adult party game (17+), English edition, for 4 to 20+ players. In its box, good condition. I'm also selling Torre de Beber, UNO Party!, Mejor/Peor Amig@ and Exploding Kittens Party Pack."
+  }
+ },
+ {
+  "code": "MV-103",
+  "title": "4 individuales redondos tejidos de jacinto de agua · $60 c/u",
+  "price": 60,
+  "originalPrice": 0,
+  "cashPrice": 60,
+  "delivery": 0,
+  "category": "Cocina",
+  "condition": "Buen estado",
+  "size": "Aprox. 38 cm de diámetro",
+  "brand": "",
+  "description": "Individuales (manteles para plato) redondos tejidos a mano en fibra natural de jacinto de agua, aprox. 38 cm. Son 4: $60 c/u, o las 4 piezas juntas con el botón de abajo. Buen estado.",
+  "photos": [
+   "images/mv-103-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-e48586ee-d2cb-439e-a4c0-d77bea3129a8",
+   "all": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-ba5b0377-878e-428a-8ed0-eb6bacfd6b58"
+  },
+  "en": {
+   "title": "4 round woven water hyacinth placemats · $60 each",
+   "size": "About 38 cm diameter",
+   "condition": "Good condition",
+   "description": "Round placemats hand-woven from natural water hyacinth fiber, about 38 cm. There are 4: $60 each, or all 4 together with the button below. Good condition."
+  },
+  "qty": 4,
+  "allPrice": 240
+ },
+ {
+  "code": "MV-104",
+  "title": "Lámpara de luna 3D con base de madera, cambia de color",
+  "price": 200,
+  "originalPrice": 0,
+  "cashPrice": 200,
+  "delivery": 0,
+  "category": "Iluminación",
+  "condition": "Buen estado",
+  "size": "Aprox. 15 cm de diámetro",
+  "brand": "",
+  "description": "Lámpara de luna 3D con textura de cráteres y base de madera. Recargable, luz cálida, blanca y de colores (en la foto se ve en azul). Ideal como lámpara de noche o decoración. Buen estado.",
+  "photos": [
+   "images/mv-104-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-ba3b54a5-638e-491e-a2f5-b5691d3d7853"
+  },
+  "en": {
+   "title": "3D moon lamp with wooden stand, color changing",
+   "size": "About 15 cm diameter",
+   "condition": "Good condition",
+   "description": "3D moon lamp with crater texture and a wooden stand. Rechargeable, warm, white and colored light (shown in blue in the photo). Great as a night light or decor. Good condition."
+  }
+ },
+ {
+  "code": "MV-105",
+  "title": "Cerradura inteligente ThorBolt X1 con Apple Home, huella y teclado",
+  "price": 2090,
+  "originalPrice": 0,
+  "cashPrice": 2090,
+  "delivery": 0,
+  "category": "Hogar",
+  "condition": "Como nueva (2 meses de uso)",
+  "size": "Para puerta de entrada",
+  "brand": "ThorBolt",
+  "description": "Cerradura inteligente ThorBolt X1 con seis formas de abrir: llave de casa de Apple Home (acercas el iPhone o el Apple Watch), Siri, app, huella digital, teclado y llave. Funciona sobre Thread. Solo 2 meses de uso, con su caja. Ya funciona con la instalación de las puertas de BeGrand: es más ancha y cubre la preparación que ya tiene la puerta, así que no hay que hacer adaptaciones.",
+  "photos": [
+   "images/mv-105-1.jpg",
+   "images/mv-105-2.jpg",
+   "images/mv-105-3.jpg",
+   "images/mv-105-4.jpg",
+   "images/mv-105-5.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-c11ae81e-7c48-4ddc-b7bf-6a3e37c42cd3"
+  },
+  "en": {
+   "title": "ThorBolt X1 smart lock with Apple Home, fingerprint and keypad",
+   "size": "For an entry door",
+   "condition": "Like new (used 2 months)",
+   "description": "ThorBolt X1 smart lock with six ways to unlock: Apple Home key (tap your iPhone or Apple Watch), Siri, app, fingerprint, keypad and key. Built on Thread. Used only 2 months, comes with its box. Already works with the BeGrand door installation: it's wider and covers the cutout the door already has, so no changes are needed."
+  }
  }
 ]
