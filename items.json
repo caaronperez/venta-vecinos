@@ -35,8 +35,9 @@
   "condition": "Buen estado",
   "size": "75 pulgadas",
   "brand": "LG",
-  "description": "Pantalla LG UHD de 75 pulgadas, modelo 75UN8000PUB: 4K, Smart TV con webOS y ThinQ AI. Funciona perfectamente. Se entrega con control remoto y cable de corriente; se desmonta de la pared para la entrega.",
+  "description": "Pantalla LG UHD de 75 pulgadas, modelo 75UN8000PUB: 4K, Smart TV con webOS y ThinQ AI. Funciona perfectamente. Incluye el soporte para montarla en la pared y la canaleta para esconder los cables que bajan a la consola (corriente, ethernet, HDMI o cualquier otro módulo). Se entrega con control remoto y cable de corriente; se desmonta de la pared para la entrega.",
   "photos": [
+   "images/mv-05-3.jpg",
    "images/mv-05-1.jpg",
    "images/mv-05-2.jpg"
   ],
@@ -46,8 +47,34 @@
   },
   "en": {
    "title": "LG 75\" 4K UHD Smart TV ThinQ AI (75UN8000)",
-   "description": "LG 75-inch UHD TV, model 75UN8000PUB: 4K Smart TV with webOS and ThinQ AI. Works perfectly. Comes with remote and power cable; taken off the wall for pickup.",
+   "description": "LG 75-inch UHD TV, model 75UN8000PUB: 4K Smart TV with webOS and ThinQ AI. Works perfectly. Includes the wall mount and the cable raceway that hides the cables running down to the console (power, ethernet, HDMI or any other device). Comes with remote and power cable; taken off the wall for pickup.",
    "size": "75 inches"
+  }
+ },
+ {
+  "code": "MV-06",
+  "title": "Mueble para TV negro Madesa 180 cm, 2 puertas y 1 cajón",
+  "price": 1360,
+  "originalPrice": 3199,
+  "cashPrice": 1360,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "180 x 40 x 50 cm",
+  "brand": "Madesa",
+  "description": "Mueble para TV Madesa color negro, para pantallas de hasta 80\". Mide 180 cm de ancho x 40 cm de fondo x 50 cm de alto, con 2 puertas y 1 cajón para guardar consolas y controles. En buen estado.",
+  "photos": [
+   "images/mv-06-1.jpg",
+   "images/mv-06-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-537bd007-5bdd-4d93-9b86-e797a1e657d5"
+  },
+  "en": {
+   "title": "Madesa black TV stand, 180 cm, 2 doors and 1 drawer",
+   "description": "Black Madesa TV stand for screens up to 80\". 180 cm wide x 40 cm deep x 50 cm high, with 2 doors and 1 drawer for consoles and remotes. Good condition.",
+   "size": "180 x 40 x 50 cm"
   }
  },
  {
