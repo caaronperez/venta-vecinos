@@ -81,9 +81,9 @@
  {
   "code": "MV-09",
   "title": "Lámpara de pie trípode de madera con pantalla gris oscuro",
-  "price": 640,
+  "price": 510,
   "originalPrice": 2198,
-  "cashPrice": 640,
+  "cashPrice": 510,
   "delivery": 0,
   "category": "Iluminación",
   "condition": "Buen estado",
@@ -101,7 +101,8 @@
    "title": "Wooden tripod floor lamp with dark gray shade",
    "description": "Tripod floor lamp with wooden legs and a dark gray fabric shade. About 155 cm tall. Works perfectly, good condition.",
    "size": "155 cm tall"
-  }
+  },
+  "wasPrice": 640
  },
  {
   "code": "MV-16",
@@ -499,7 +500,8 @@
   "brand": "IKEA x Sonos",
   "description": "Lámpara con bocina Wi-Fi IKEA SYMFONISK (Sonos), base negra con pantalla de vidrio ahumado. Funciona con la app de Sonos y AirPlay 2, sonido muy bueno. Tengo dos; se pueden usar juntas como par estéreo. Precio por pieza.",
   "photos": [
-   "images/mv-53-1.jpg"
+   "images/mv-53-1-eda096.jpg",
+   "images/mv-53-2-eda096.jpg"
   ],
   "status": "disponible",
   "links": {
