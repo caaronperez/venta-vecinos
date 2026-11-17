@@ -79,6 +79,31 @@
   }
  },
  {
+  "code": "MV-09",
+  "title": "Lámpara de pie trípode de madera con pantalla gris oscuro",
+  "price": 640,
+  "originalPrice": 2198,
+  "cashPrice": 640,
+  "delivery": 0,
+  "category": "Iluminación",
+  "condition": "Buen estado",
+  "size": "Alto 155 cm",
+  "brand": "",
+  "description": "Lámpara de piso tipo trípode con patas de madera y pantalla de tela gris oscuro. Altura aprox. 155 cm. Funciona perfecto, en buen estado.",
+  "photos": [
+   "images/mv-09-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-9542f2c4-e8bb-4677-80bc-16c98e3b0435"
+  },
+  "en": {
+   "title": "Wooden tripod floor lamp with dark gray shade",
+   "description": "Tripod floor lamp with wooden legs and a dark gray fabric shade. About 155 cm tall. Works perfectly, good condition.",
+   "size": "155 cm tall"
+  }
+ },
+ {
   "code": "MV-15",
   "title": "Fuente de agua de piedra volcánica con plantas",
   "price": 580,
@@ -126,6 +151,31 @@
    "title": "Mirage X-One 14,000 BTU portable AC, cool/heat",
    "description": "Mirage X-One MAPS1411H portable air conditioner, 14,000 BTU, cooling and heating, with dehumidifier. Includes the BeGrand installation parts needed to vent the air out the window, plus the exhaust hose and remote. Works perfectly.",
    "size": "47 x 39 x 77 cm"
+  }
+ },
+ {
+  "code": "MV-19",
+  "title": "Dyson Hot+Cool HP04: purificador, calefactor y ventilador",
+  "price": 3970,
+  "originalPrice": 6620,
+  "cashPrice": 3970,
+  "delivery": 0,
+  "category": "Electrodomésticos",
+  "condition": "Como nuevo",
+  "size": "25 x 25 x 102 cm",
+  "brand": "Dyson",
+  "description": "Dyson Pure Hot+Cool HP04 blanco/plata: purificador de aire con filtro HEPA, calefactor y ventilador en uno, con control remoto. Versión japonesa (2020). En excelente estado.",
+  "photos": [
+   "images/mv-19-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-85ab8435-3b1f-4af5-8b47-707171da9695"
+  },
+  "en": {
+   "title": "Dyson Hot+Cool HP04: purifier, heater and fan",
+   "description": "White/silver Dyson Pure Hot+Cool HP04: HEPA air purifier, heater and fan in one, with remote. Japanese version (2020). Excellent condition.",
+   "size": "25 x 25 x 102 cm"
   }
  },
  {
@@ -233,6 +283,32 @@
   }
  },
  {
+  "code": "MV-30",
+  "title": "Mesa redonda de cristal estilo Eames + 1 silla gris",
+  "price": 1050,
+  "originalPrice": 1329,
+  "cashPrice": 1050,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "Mesa Ø 80 cm x 73 cm aprox.",
+  "brand": "",
+  "description": "Mesa redonda con cubierta de cristal templado de aprox. 80 cm y patas de madera estilo Eames con travesaños metálicos negros. Incluye una silla estilo Eames gris (igual a las del comedor). En buen estado, ideal para desayunador o espacio pequeño.",
+  "photos": [
+   "images/mv-30-1.jpg",
+   "images/mv-30-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-14bef7a5-dbbb-40f5-8aff-9ea1cbd986db"
+  },
+  "en": {
+   "title": "Round glass Eames-style table + 1 gray chair",
+   "description": "Round table with an approx. 80 cm tempered glass top and Eames-style wooden legs with black metal cross bars. Includes one gray Eames-style chair (same as the dining chairs). Good condition, great for a breakfast nook or small space.",
+   "size": "Table about Ø 80 x 73 cm"
+  }
+ },
+ {
   "code": "MV-33",
   "title": "Aparador IKEA FJÄLLBO negro con puertas de malla",
   "price": 3140,
@@ -306,6 +382,134 @@
    "title": "Frigidaire 24\" stainless steel dishwasher",
    "description": "Built-in 24-inch Frigidaire dishwasher with stainless steel door and black control panel. Works well. BeGrand apartments already have the water and power hookups for a dishwasher, so no extra installation is needed.",
    "size": "24\" (60 x 60 x 86 cm)"
+  }
+ },
+ {
+  "code": "MV-39",
+  "title": "Cafetera Nespresso Lattissima con espumador de leche",
+  "price": 2930,
+  "originalPrice": 8990,
+  "cashPrice": 2930,
+  "delivery": 0,
+  "category": "Cocina",
+  "condition": "Buen estado",
+  "size": "18 x 33 x 27 cm aprox.",
+  "brand": "Nespresso",
+  "description": "Cafetera Nespresso by De'Longhi de la línea Lattissima con jarra de leche integrada para cappuccino y latte, color gris. Funciona perfectamente y está en buen estado. Usa cápsulas Nespresso Original.",
+  "photos": [
+   "images/mv-39-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-5f729465-cd64-4609-ad2f-d00a22660400"
+  },
+  "en": {
+   "title": "Nespresso Lattissima coffee maker with milk frother",
+   "description": "Gray Nespresso by De'Longhi Lattissima coffee maker with built-in milk jug for cappuccino and latte. Works perfectly, good condition. Uses Nespresso Original capsules.",
+   "size": "About 18 x 33 x 27 cm"
+  }
+ },
+ {
+  "code": "MV-44",
+  "title": "Despachador de agua Whirlpool carga inferior frío/caliente",
+  "price": 2090,
+  "originalPrice": 9899,
+  "cashPrice": 2090,
+  "delivery": 0,
+  "category": "Electrodomésticos",
+  "condition": "Buen estado",
+  "size": "34 x 31 x 104 cm",
+  "brand": "Whirlpool",
+  "description": "Despachador enfriador de agua Whirlpool de carga inferior (el garrafón de 11 o 19 L va oculto abajo), con enfriamiento por compresor y panel digital de temperatura. Funciona perfectamente y está en buen estado. Medidas aprox. 34 x 31 x 104 cm.",
+  "photos": [
+   "images/mv-44-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-69354c8f-0cc4-47da-8be1-e465e470f0d7"
+  },
+  "en": {
+   "title": "Whirlpool bottom-load hot/cold water dispenser",
+   "description": "Whirlpool bottom-load water dispenser (the 11 or 19 L jug hides inside the base), compressor cooling and digital temperature panel. Works perfectly, good condition. About 34 x 31 x 104 cm.",
+   "size": "34 x 31 x 104 cm"
+  }
+ },
+ {
+  "code": "MV-53",
+  "title": "Lámpara bocina IKEA SYMFONISK Sonos Wi-Fi negra",
+  "price": 5220,
+  "originalPrice": 7999,
+  "cashPrice": 5220,
+  "delivery": 0,
+  "category": "Electrónica",
+  "condition": "Buen estado",
+  "size": "40 cm de alto aprox.",
+  "brand": "IKEA x Sonos",
+  "description": "Lámpara con bocina Wi-Fi IKEA SYMFONISK (Sonos), base negra con pantalla de vidrio ahumado. Funciona con la app de Sonos y AirPlay 2, sonido muy bueno. Tengo dos; se pueden usar juntas como par estéreo. Precio por pieza.",
+  "photos": [
+   "images/mv-53-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-aebf4289-ae9b-4e24-ae8a-f77029fd0787",
+   "all": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-e0369b34-5a69-424a-8c49-056ce69d5261"
+  },
+  "en": {
+   "title": "IKEA SYMFONISK Sonos Wi-Fi speaker lamp, black",
+   "description": "IKEA SYMFONISK (Sonos) Wi-Fi speaker lamp, black base with smoked glass shade. Works with the Sonos app and AirPlay 2, great sound. I have two; they can be paired as stereo speakers. Price is per piece.",
+   "size": "About 40 cm tall"
+  },
+  "qty": 2,
+  "allPrice": 10440
+ },
+ {
+  "code": "MV-54",
+  "title": "Buró estilo mid-century con cajón chevron",
+  "price": 430,
+  "originalPrice": 1500,
+  "cashPrice": 430,
+  "delivery": 0,
+  "category": "Recámara",
+  "condition": "Buen estado",
+  "size": "40 x 35 x 55 cm aprox.",
+  "brand": "",
+  "description": "Buró de estilo mid-century en tono nogal, con cajón de diseño chevron, repisa abierta y patas negras. Usado, con detalles leves de uso en la cubierta.",
+  "photos": [
+   "images/mv-54-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-3c41ff9f-60a2-4c10-90d4-31b578c93d96"
+  },
+  "en": {
+   "title": "Mid-century nightstand with chevron drawer",
+   "description": "Mid-century style nightstand in walnut tone, chevron-pattern drawer, open shelf and black legs. Used, light wear on the top.",
+   "size": "About 40 x 35 x 55 cm"
+  }
+ },
+ {
+  "code": "MV-62",
+  "title": "Zapatera blanca con madera, 3 puertas y cajón",
+  "price": 1160,
+  "originalPrice": 1741,
+  "cashPrice": 1160,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Buen estado",
+  "size": "100 x 30 x 105 cm aprox.",
+  "brand": "",
+  "description": "Zapatera/mueble de recibidor en blanco con madera, 3 puertas, un cajón y repisa abierta abajo, aprox. 100x30x105 cm. En buen estado.",
+  "photos": [
+   "images/mv-62-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-47c17a47-7a6d-4193-8cf8-c87936032922"
+  },
+  "en": {
+   "title": "White and wood shoe cabinet, 3 doors and drawer",
+   "description": "White and wood shoe cabinet / entryway unit with 3 doors, a drawer and an open bottom shelf, about 100 x 30 x 105 cm. Good condition.",
+   "size": "About 100 x 30 x 105 cm"
   }
  },
  {
