@@ -751,16 +751,16 @@
  },
  {
   "code": "MV-93",
-  "title": "Cabecera King Size tapizada color arena",
+  "title": "Cabecera matrimonial tapizada color arena",
   "price": 320,
   "originalPrice": 1799,
   "cashPrice": 320,
   "delivery": 0,
   "category": "Muebles",
   "condition": "Buen estado",
-  "size": "King Size",
+  "size": "Matrimonial",
   "brand": "",
-  "description": "Cabecera tapizada para cama King Size en tela color arena. Usada, en buen estado y sin roturas. La cama de las fotos es matrimonial y no se incluye.",
+  "description": "Cabecera tapizada para cama matrimonial en tela color arena. Usada, en buen estado y sin roturas. El colchón con box de las fotos se vende aparte (MV-106).",
   "photos": [
    "images/mv-93-1.jpg",
    "images/mv-93-2.jpg"
@@ -770,9 +770,9 @@
    "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-34914921-1618-49d6-8631-481d0d0561e7"
   },
   "en": {
-   "title": "Sand-colored upholstered King headboard",
-   "size": "King size",
-   "description": "Upholstered King-size headboard in sand-colored fabric. Used, good condition, no tears. The bed in the photos is a full/double and isn't included."
+   "title": "Sand-colored upholstered full/double headboard",
+   "size": "Full/double",
+   "description": "Upholstered headboard for a full/double (matrimonial) bed in sand-colored fabric. Used, good condition, no tears. The mattress and box spring in the photos are sold separately (MV-106)."
   }
  },
  {
@@ -1122,6 +1122,32 @@
    "size": "For an entry door",
    "condition": "Like new (used 2 months)",
    "description": "ThorBolt X1 smart lock with six ways to unlock: Apple Home key (tap your iPhone or Apple Watch), Siri, app, fingerprint, keypad and key. Built on Thread. Used only 2 months, comes with its box. Already works with the BeGrand door installation: it's wider and covers the cutout the door already has, so no changes are needed."
+  }
+ },
+ {
+  "code": "MV-106",
+  "title": "Colchón matrimonial con box, muy poco uso",
+  "price": 7300,
+  "originalPrice": 12000,
+  "cashPrice": 7300,
+  "delivery": 0,
+  "category": "Recámara",
+  "condition": "Como nuevo",
+  "size": "Matrimonial",
+  "brand": "",
+  "description": "Colchón matrimonial con su box. Lo compré hace 6 meses en Costco en $12,000 y estuvo en el cuarto de visitas, así que tiene muy poco uso. La cabecera matrimonial de la foto se vende aparte (MV-93).",
+  "photos": [
+   "images/mv-106-1.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-3a3b32c4-57c5-493b-8461-d4be18269085"
+  },
+  "en": {
+   "title": "Full/double mattress with box spring, barely used",
+   "size": "Full/double (matrimonial)",
+   "condition": "Like new",
+   "description": "Full/double (matrimonial) mattress with its box spring. I bought it 6 months ago at Costco for $12,000 and it was in the guest room, so it has very little use. The headboard in the photo is sold separately (MV-93)."
   }
  }
 ]
