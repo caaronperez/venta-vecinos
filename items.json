@@ -556,7 +556,7 @@
   "photos": [
    "images/mv-62-1.jpg"
   ],
-  "status": "oferta",
+  "status": "vendido",
   "links": {
    "bbva": "https://api.openpay.mx/v1/ms1yc7i9o9skh4el5fq6/customers/ahy3v3rwnxqf7c1cedmo/checkouts/ck490j1x8wipjf1nzbkl"
   },
@@ -1307,6 +1307,31 @@
   }
  },
  {
+  "code": "MV-46",
+  "title": "Barra de luz LED bajo gabinete para cocina",
+  "price": 110,
+  "originalPrice": 0,
+  "cashPrice": 110,
+  "delivery": 0,
+  "category": "Iluminación",
+  "condition": "Buen estado",
+  "size": "50–60 cm de largo",
+  "brand": "",
+  "description": "Barra de luz LED para bajo gabinete de cocina, cuerpo de aluminio con difusor, aprox. 50–60 cm. Funciona bien.",
+  "photos": [
+   "images/mv-46-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-5e66b304-26c9-41a6-8979-062843ae6dfd"
+  },
+  "en": {
+   "title": "Under-cabinet LED light bar for the kitchen",
+   "description": "Under-cabinet kitchen LED light bar, aluminum body with diffuser, about 50–60 cm. Works well.",
+   "size": "50–60 cm long"
+  }
+ },
+ {
   "code": "MV-49",
   "title": "Bote de basura chico con pedal, color crema",
   "price": 60,
@@ -1354,6 +1379,31 @@
    "title": "Arched full-length mirror, black frame",
    "description": "Arched full-length mirror with a black metal frame, about 50 x 145 cm. Good condition, no spots or chips.",
    "size": "About 50 x 145 cm"
+  }
+ },
+ {
+  "code": "MV-69",
+  "title": "Lámpara de mesa hongo naranja estilo retro",
+  "price": 130,
+  "originalPrice": 650,
+  "cashPrice": 130,
+  "delivery": 0,
+  "category": "Iluminación",
+  "condition": "Buen estado",
+  "size": "Ø 34 x 27 cm aprox.",
+  "brand": "",
+  "description": "Lámpara de mesa tipo hongo color naranja, estilo retro de los 70 (réplica estilo Nesso). Aprox. 34 cm de diámetro x 27 cm de alto. Funciona perfecto, en buen estado.",
+  "photos": [
+   "images/mv-69-1.jpg"
+  ],
+  "status": "vendido",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-57a4e1a9-1344-4ca7-a9d4-c1eae5c93f79"
+  },
+  "en": {
+   "title": "Retro orange mushroom table lamp",
+   "description": "Orange mushroom table lamp in a '70s retro style (Nesso-style replica). About 34 cm diameter x 27 cm tall. Works perfectly, good condition.",
+   "size": "About Ø 34 x 27 cm"
   }
  }
 ]
