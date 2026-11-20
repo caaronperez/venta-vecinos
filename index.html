@@ -822,8 +822,8 @@ dialog::backdrop { background: rgba(20,37,27,.45); backdrop-filter: blur(6px); }
 
   fetch(ROOT + "items.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (data) {
     items = (Array.isArray(data) ? data : []).filter(function (i) { return i && i.code && i.title && Number(i.price) > 0; });
-    // "featured" items go first (e.g. MV-90), then available before sold, then by code.
-    items.sort(function (a, b) { return (Number(b.featured) || 0) - (Number(a.featured) || 0) || (a.status === "vendido") - (b.status === "vendido") || String(a.code).localeCompare(String(b.code)); });
+    // "featured" items go first (e.g. MV-90), then available before sold, then highest price first, then by code.
+    items.sort(function (a, b) { return (Number(b.featured) || 0) - (Number(a.featured) || 0) || (a.status === "vendido") - (b.status === "vendido") || (Number(b.price) || 0) - (Number(a.price) || 0) || String(a.code).localeCompare(String(b.code)); });
     buildNav(); render();
     var c = location.hash.slice(1); if (/^MV/.test(c)) open(c);
   }).catch(function () { buildNav(); render(); });
