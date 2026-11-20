@@ -1151,6 +1151,33 @@
   }
  },
  {
+  "code": "MV-108",
+  "title": "Cama King Size: colchón Spring Air Atlantic + box",
+  "price": 17730,
+  "originalPrice": 27000,
+  "cashPrice": 17730,
+  "delivery": 0,
+  "category": "Recámara",
+  "condition": "Buen estado",
+  "size": "King Size",
+  "brand": "Spring Air",
+  "description": "Cama King Size: colchón Spring Air modelo Atlantic con memory foam y gel refrescante (Cool Gel), incluye su box. En buen estado. Precio nuevo aprox. $27,000. La cabecera no se incluye.",
+  "photos": [
+   "images/mv-108-1.jpg",
+   "images/mv-108-2.jpg"
+  ],
+  "status": "disponible",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-e71e3723-0efa-4208-aa48-e00ca228dcab"
+  },
+  "en": {
+   "title": "King size bed: Spring Air Atlantic mattress + box spring",
+   "condition": "Good condition",
+   "size": "King",
+   "description": "King size bed: Spring Air Atlantic mattress with memory foam and Cool Gel, box spring included. Good condition. About $27,000 new. Headboard not included."
+  }
+ },
+ {
   "code": "MV-02",
   "title": "Sala esquinera gris claro con chaise, capitonada",
   "price": 6260,
