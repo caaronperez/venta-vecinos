@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// GitHub Pages is slow or unreachable from some phones in Mexico (Nov 2026): open the same page on the Cloudflare mirror
+// (~/MovingSale/mirror, same files, redeployed every 5 min). Link previews still read this GitHub page.
+(function () {
+  var m = location.hostname === "caaronperez.github.io" && /^\/venta-(mudanza|vecinos)\/(.*)$/.exec(location.pathname);
+  if (m) location.replace("https://venta-" + m[1] + ".caaronperez.workers.dev/" + m[2] + location.search + location.hash);
+})();
+</script>
 <title>Venta de mudanza · Vecinos BeGrand</title>
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
