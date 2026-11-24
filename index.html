@@ -304,6 +304,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
   <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 32 28"><path d="M3 10L16 3l13 7z"/><path d="M6 13v9M12 13v9M20 13v9M26 13v9M3 25h26"/></symbol>
   <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
   <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2.2M21 4l-3 16-6.5-5M21 4L9 13.2v5.3l2.5-3.5"/></symbol>
 </svg>
@@ -320,7 +321,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
 <section class="hero">
   <div class="wrap">
     <div class="hero-text">
-      <span class="tag" id="deadline">Hasta el 12 de diciembre</span>
+      <span class="tag" id="deadline">Hasta el 13 de diciembre</span>
       <h1 data-t="h1">Venta para vecinos</h1>
       <p data-t="lead">Me mudo y estas cosas son difíciles de llevar. Si vives en BeGrand, te ahorras el flete: lo recoges aquí mismo. Paga con Mercado Pago hasta 3 meses sin intereses, o en efectivo al recoger: mismo precio.</p>
       <a class="cta" href="#articulos"><span data-t="cta">Ver artículos</span> <svg class="i" style="width:20px;height:20px;stroke-width:2"><use href="#i-down"/></svg></a>
@@ -338,7 +339,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     <div class="feature"><svg class="i"><use href="#i-cash"/></svg><span data-t="f2">Mismo precio en efectivo o con tarjeta</span></div>
     <div class="feature"><svg class="i"><use href="#i-truck"/></svg><span data-t="f3">Sin flete: lo recoges aquí mismo en BeGrand</span></div>
   </div>
-  <p class="pickup-note" data-t="pickupNote">Puedes recogerlo del lunes 23 de noviembre al sábado 12 de diciembre, que es el último día. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.</p>
+  <p class="pickup-note" data-t="pickupNote">Puedes recogerlo del lunes 30 de noviembre al domingo 13 de diciembre, que es el último día. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.</p>
 
   <section id="articulos" aria-label="Artículos" data-t-al="items">
     <div class="articles-head">
@@ -367,7 +368,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
 
   <section class="how" id="como-comprar" aria-label="Cómo comprar" data-t-al="how">
     <div class="step"><svg class="i"><use href="#i-hand"/></svg><h3 data-t="s1h">Elige</h3><p data-t="s1p">Toca cualquier artículo para ver fotos, medidas y detalles.</p></div>
-    <div class="step"><svg class="i"><use href="#i-tag"/></svg><h3 data-t="s2h">Paga o haz una oferta</h3><p data-t="s2p">Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia), en efectivo al recoger, o mándame tu oferta por WhatsApp.</p></div>
+    <div class="step"><svg class="i"><use href="#i-tag"/></svg><h3 data-t="s2h">Paga o haz una oferta</h3><p data-t="s2p">Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia SPEI desde tu banco), en efectivo al recoger, o mándame tu oferta por WhatsApp.</p></div>
     <div class="step"><svg class="i"><use href="#i-open"/></svg><h3 data-t="s3h">Recoge</h3><p id="step3">Coordinamos día y hora por WhatsApp y lo recoges aquí en el edificio.</p></div>
   </section>
 </div>
@@ -397,6 +398,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       <div id="m-was" hidden></div>
       <div id="m-orig"></div>
       <div class="msi-box" id="m-msi"></div>
+      <div class="msi-box" id="m-spei"></div>
       <div class="cash-box" id="m-cash"></div>
       <dl class="facts" id="m-facts"></dl>
       <p class="desc" id="m-desc"></p>
@@ -428,7 +430,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     whatsappFallback: "https://wa.me/qr/PAX2YVEUDF44G1?s=p",
     pickup: "BeGrand Alto Polanco, Torre 4 · Anáhuac I Secc., CP 11320, CDMX",
     pickupShort: "Alto Polanco, CDMX",
-    deadline: "2026-12-12T23:59:00-06:00",
+    deadline: "2026-12-13T23:59:00-06:00",
     // Items with an offer in process (status "oferta"): false = pay buttons stay usable, true = shown greyed out.
     offerLocksPay: true,
     // Cash price = Mercado Pago price minus its commission (3.49% + $4, + IVA), rounded down to $10. Pickup only.
@@ -455,19 +457,19 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       searchPh: "Buscar: nombre, precio, código, marca, medidas…", searchAl: "Buscar artículos", clear: "Borrar búsqueda",
       emptyH: "Estoy subiendo los artículos", emptyP: "Si buscas algo en específico, escríbeme.", emptyBtn: "Escríbeme por WhatsApp",
       s1h: "Elige", s1p: "Toca cualquier artículo para ver fotos, medidas y detalles.",
-      s2h: "Paga o haz una oferta", s2p: "Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia), en efectivo al recoger, o mándame tu oferta por WhatsApp.",
+      s2h: "Paga o haz una oferta", s2p: "Paga con Mercado Pago (tarjeta hasta 3 MSI, OXXO o transferencia SPEI desde tu banco), en efectivo al recoger, o mándame tu oferta por WhatsApp.",
       s3h: "Recoge", s3p: "Recoge en {pickup}. Coordinamos día y hora por WhatsApp.",
       secure: "Pagos seguros con", footPrices: "Precios en pesos mexicanos (MXN). El precio en efectivo es solo para recoger en persona.", footWa: "Contacto por WhatsApp",
       close: "Cerrar", withMp: "MXN · con Mercado Pago", withBbva: "MXN · con BBVA", fineBbva: "Paga con BBVA y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.", copy: "Copiar enlace", copied: "Enlace copiado ✓",
       fine: "Paga con Mercado Pago y envía tu comprobante por WhatsApp para coordinar la entrega. El pago en efectivo es solo para recoger en persona.",
-      daysLeft: "Hasta el 12 de diciembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
+      daysLeft: "Hasta el 13 de diciembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
       waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
       sold: "Vendido", held: "Apartado", offer: "Oferta en proceso", offerNote: "Hay una oferta en proceso. Si no se concreta, se vuelve a habilitar el pago.", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
-      orMsi: "o 3 × {amt} sin intereses", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
+      orMsi: "o 3 MSI de {amt} con Mercado Pago", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
       photo: "{t} · foto {i} de {n}", zoom: "Ampliar", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
-      msiBox: "Hasta 3 meses sin intereses · ", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, del lunes 23 de noviembre al sábado 12 de diciembre. Sin pago no queda apartado: si alguien más lo paga antes, se vende.", pickupNote: "Puedes recogerlo del lunes 23 de noviembre al sábado 12 de diciembre, que es el último día. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.",
+      msiBox: "3 MSI pagando con Mercado Pago · ", spei: "También por transferencia SPEI desde la app de tu banco: abre el link de Mercado Pago y elige pagar con transferencia.", fWhen: "Recoger", pickWhen: "Lunes 30 de noviembre al domingo 13 de diciembre", cashBox: "Pago en efectivo: ", cashNote: "Se paga en persona al recoger, del lunes 30 de noviembre al domingo 13 de diciembre. Sin pago no queda apartado: si alguien más lo paga antes, se vende.", pickupNote: "Puedes recogerlo del lunes 30 de noviembre al domingo 13 de diciembre, que es el último día. Si prefieres, paga hasta el día que lo recojas; solo que así no queda apartado: si alguien más lo paga antes, se vende.",
       fCond: "Estado", fSize: "Medidas", fBrand: "Marca", fPickup: "Recoger en", fShip: "Envío", ship: "Por tu cuenta: Lalamove, Uber Flash o DiDi Entrega",
       planH: "Paga con tarjeta en {n} pagos", planP: "Mercado Pago acepta hasta $300,000 por pago con tarjeta. Haz los {n} pagos (suman {total}) y mándame los comprobantes por WhatsApp.", planI: "Pago {i} de {n}",
       paidMark: "Pagado ✓", leftN: "Faltan {left} de {n} pagos ({amt}) para llevártelo", left1: "Falta 1 pago ({amt}) para llevártelo",
@@ -498,19 +500,19 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       searchPh: "Search: name, price, code, brand, size…", searchAl: "Search items", clear: "Clear search",
       emptyH: "I'm uploading the items", emptyP: "Looking for something specific? Message me.", emptyBtn: "Message me on WhatsApp",
       s1h: "Choose", s1p: "Tap any item to see photos, measurements and details.",
-      s2h: "Pay or make an offer", s2p: "Pay with Mercado Pago (card in up to 3 interest-free installments, OXXO or bank transfer), in cash with a discount at pickup, or send me your offer on WhatsApp.",
+      s2h: "Pay or make an offer", s2p: "Pay with Mercado Pago (card in up to 3 interest-free installments, OXXO or SPEI transfer from your bank), in cash with a discount at pickup, or send me your offer on WhatsApp.",
       s3h: "Pick up or get it delivered", s3p: "Pick up at {pickup}. For delivery, you book the Lalamove, Uber Flash or DiDi Entrega and pay the driver directly. We arrange it on WhatsApp.",
       secure: "Secure payments with", footPrices: "Prices in Mexican pesos (MXN). The cash price is for in-person pickup only.", footWa: "Contact on WhatsApp",
       close: "Close", withMp: "MXN · with Mercado Pago", withBbva: "MXN · with BBVA", fineBbva: "Pay with BBVA and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.", copy: "Copy link", copied: "Link copied ✓",
       fine: "Pay with Mercado Pago and send me your receipt on WhatsApp to arrange pickup. The cash price is for in-person pickup only.",
-      daysLeft: "Until December 12 · {n} days left", lastDay: "Last day", lastItems: "Last items",
+      daysLeft: "Until December 13 · {n} days left", lastDay: "Last day", lastItems: "Last items",
       waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
       sold: "Sold", held: "On hold", offer: "Offer pending", offerNote: "An offer is in progress. If it falls through, payment opens again.", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
-      orMsi: "or 3 × {amt} interest-free", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
+      orMsi: "or 3 interest-free payments of {amt} with Mercado Pago", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
       photo: "{t} · photo {i} of {n}", zoom: "Zoom", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
-      msiBox: "Up to 3 interest-free installments · ", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, from Monday Nov 23 to Saturday Dec 12. Without payment it isn't held: if someone else pays first, it's sold.", pickupNote: "You can pick it up from Monday Nov 23 to Saturday Dec 12, the last day. You can wait and pay when you pick it up, but that doesn't hold it: if someone else pays first, it's sold.",
+      msiBox: "3 interest-free installments with Mercado Pago · ", spei: "You can also pay by SPEI transfer from your bank's app: open the Mercado Pago link and choose bank transfer.", fWhen: "Pickup dates", pickWhen: "Monday Nov 30 to Sunday Dec 13", cashBox: "Cash price: ", cashNote: "Paid in person at pickup, from Monday Nov 30 to Sunday Dec 13. Without payment it isn't held: if someone else pays first, it's sold.", pickupNote: "You can pick it up from Monday Nov 30 to Sunday Dec 13, the last day. You can wait and pay when you pick it up, but that doesn't hold it: if someone else pays first, it's sold.",
       fCond: "Condition", fSize: "Size", fBrand: "Brand", fPickup: "Pickup at", fShip: "Delivery", ship: "Your own: Lalamove, Uber Flash or DiDi Entrega",
       planH: "Pay by card in {n} payments", planP: "Mercado Pago accepts up to $300,000 per card payment. Make all {n} payments (they add up to {total}) and send me the receipts on WhatsApp.", planI: "Payment {i} of {n}",
       paidMark: "Paid ✓", leftN: "{left} of {n} payments left ({amt}) to take it home", left1: "1 payment left ({amt}) to take it home",
@@ -806,12 +808,16 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     var msi = document.getElementById("m-msi");
     msi.replaceChildren(icon("i-card"), h("span", null, [t("msiBox"), h("b", { text: "3 × " + money(it.price / 3) })]));
     msi.hidden = sold || useBbva || Number(it.price) > 300000;
+    // Every Mercado Pago link also takes SPEI bank transfers (method "clabe"; no payment method is excluded on the links).
+    var sp = document.getElementById("m-spei");
+    sp.replaceChildren(icon("i-bank"), h("span", { text: t("spei") }));
+    sp.hidden = sold || held || !safeUrl((it.links || {}).pickup);
     var cb = document.getElementById("m-cash");
     cb.replaceChildren(icon("i-cash"), h("span", null, [t("cashBox"), h("b", { text: money(cashPrice(it)) }), h("small", { text: t("cashNote") })]));
     cb.hidden = sold;
     var facts = document.getElementById("m-facts");
     facts.replaceChildren();
-    [[t("fCond"), tr(it, "condition")], [t("fSize"), tr(it, "size")], [t("fBrand"), it.brand], [t("fPickup"), CONFIG.pickup || "CDMX"], [t("fShip"), t("ship")]].forEach(function (f) {
+    [[t("fCond"), tr(it, "condition")], [t("fSize"), tr(it, "size")], [t("fBrand"), it.brand], [t("fPickup"), CONFIG.pickup || "CDMX"], [t("fWhen"), t("pickWhen")], [t("fShip"), t("ship")]].forEach(function (f) {
       if (f[1]) { facts.appendChild(h("dt", { text: f[0] })); facts.appendChild(h("dd", { text: f[1] })); }
     });
     var desc = document.getElementById("m-desc");

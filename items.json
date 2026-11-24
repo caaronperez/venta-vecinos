@@ -700,9 +700,9 @@
  {
   "code": "MV-91",
   "title": "Bote de basura NINESTARS 50 L acero inox (sensor no funciona)",
-  "price": 220,
+  "price": 200,
   "originalPrice": 1779,
-  "cashPrice": 220,
+  "cashPrice": 200,
   "delivery": 0,
   "category": "Hogar",
   "condition": "Con detalles de uso",
@@ -721,7 +721,8 @@
    "title": "NINESTARS 50 L stainless trash can (sensor doesn't work)",
    "size": "50 L",
    "description": "NINESTARS stainless steel trash can, about 50 liters, oval. The lid sensor does NOT work (sold for repair or to use opening the lid by hand). Body in good shape and clean."
-  }
+  },
+  "wasPrice": 220
  },
  {
   "code": "MV-92",
