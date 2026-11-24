@@ -776,32 +776,6 @@
   }
  },
  {
-  "code": "MV-94",
-  "title": "Sábila (aloe vera) grande con maceta decorativa",
-  "price": 170,
-  "originalPrice": 650,
-  "cashPrice": 170,
-  "delivery": 0,
-  "category": "Decoración",
-  "condition": "Buen estado",
-  "size": "55 cm de alto x 75 cm de ancho",
-  "brand": "",
-  "description": "Planta de sábila (aloe vera) natural y grande, aprox. 55 cm de alto y 75 cm de ancho. Incluye maceta decorativa de cerámica texturizada color crema. Muy fácil de cuidar.",
-  "photos": [
-   "images/mv-94-1.jpg",
-   "images/mv-94-2.jpg"
-  ],
-  "status": "disponible",
-  "links": {
-   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-d1c8d13d-be21-4a04-a965-e8785e6018d5"
-  },
-  "en": {
-   "title": "Large aloe vera plant in a decorative pot",
-   "size": "55 cm tall x 75 cm wide",
-   "description": "Large real aloe vera plant, about 55 cm tall and 75 cm wide. Comes in a cream textured ceramic pot. Very easy to care for."
-  }
- },
- {
   "code": "MV-61",
   "title": "Espejo redondo IKEA STOCKHOLM 80 cm marco roble",
   "price": 1260,
