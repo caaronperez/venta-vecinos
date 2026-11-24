@@ -268,6 +268,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
 .al-opts { display: grid; gap: 10px; }
 .al-note { margin: 0; font-size: 15px; background: var(--sage); border-radius: 10px; padding: 12px 14px; }
 .al-msg { margin: 0; font-weight: 600; color: var(--green); }
+.al-toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 50; width: min(92vw, 440px); background: var(--green); color: var(--paper); font-weight: 600; font-size: 16px; line-height: 1.35; padding: 14px 18px; border-radius: 14px; box-shadow: 0 14px 30px -12px rgba(0,0,0,.5); }
 .al-sub { margin: -4px 0 4px; font-size: 14px; color: var(--muted); }
 .al-h { margin: 4px 0 0; font-weight: 700; }
 .al-note ol { margin: 8px 0 0; padding-left: 22px; display: grid; gap: 6px; }
@@ -501,7 +502,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       alAll: "Avisarme de todas las rebajas", alAllOn: "Te aviso de todas las rebajas ✓",
       alTitle1: "Avisarme si baja de precio", alTitleAll: "Avisarme de las rebajas",
       alLead1: "{code} · {title}, hoy en {price}. Solo te aviso de este artículo, en cuanto baje de precio.", alLeadAll: "Te aviso cada vez que algo de la venta baje de precio.",
-      alPushOn: "Activar notificaciones en este celular", alPushOff: "Desactivar notificaciones en este celular", alWorking: "Un momento…",
+      alPushOn: "Activar notificaciones en este celular", alPushOff: "Desactivar notificaciones en este celular", alWorking: "Un momento…", alQuick1: "Listo ✓ Te llegará una notificación si {code} baja de precio. Para dejarlo, toca la campana otra vez.", alQuickAll: "Listo ✓ Te llegará una notificación cada vez que algo baje de precio.",
       alOn: "Listo ✓ Te llegará una notificación a este dispositivo.", alOff: "Listo, ya no te aviso en este dispositivo.",
       alFail: "No se pudo activar. Intenta de nuevo o usa otra opción.",
       alDenied: "Las notificaciones de esta página están bloqueadas. Actívalas en la configuración del navegador o usa otra opción.",
@@ -548,7 +549,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       alAll: "Tell me about every price drop", alAllOn: "You'll hear about every price drop ✓",
       alTitle1: "Tell me if the price drops", alTitleAll: "Tell me about price drops",
       alLead1: "{code} · {title}, now {price}. I'll only tell you about this item, as soon as its price drops.", alLeadAll: "I'll let you know every time something in the sale drops in price.",
-      alPushOn: "Turn on notifications on this phone", alPushOff: "Turn off notifications on this phone", alWorking: "One moment…",
+      alPushOn: "Turn on notifications on this phone", alPushOff: "Turn off notifications on this phone", alWorking: "One moment…", alQuick1: "Done ✓ You'll get a notification if {code} drops in price. To stop, tap the bell again.", alQuickAll: "Done ✓ You'll get a notification every time something drops in price.",
       alOn: "Done ✓ You'll get a notification on this device.", alOff: "Done, no more notifications on this device.",
       alFail: "That didn't work. Try again or pick another option.",
       alDenied: "Notifications are blocked for this page. Turn them on in your browser settings or pick another option.",
@@ -725,7 +726,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       ]);
       var watching = AL && AL.cfg && (alWatching(it.code) || alLoad().push.all || alLoad().tg.all);
       var bell = sold || !(AL && AL.cfg) ? null : h("button", { class: "bell" + (watching ? " on" : ""), type: "button", "aria-pressed": String(!!watching),
-        "aria-label": t(watching ? "alItemOn" : "alItem") + " · " + it.code, title: t(watching ? "alItemOn" : "alItem"), onclick: function () { alOpen(it.code); } }, [icon("i-bell")]);
+        "aria-label": t(watching ? "alItemOn" : "alItem") + " · " + it.code, title: t(watching ? "alItemOn" : "alItem"), onclick: function () { alQuick(it.code); } }, [icon("i-bell")]);
       grid.appendChild(h("div", { class: "cell" }, [h("button", { class: "card" + (sold ? " is-sold" : ""), type: "button", "aria-label": it.code + ", " + tr(it, "title") + ", " + money(it.price), onclick: function () { open(it.code); } }, [ph, meta]), bell]));
     });
     var avail = items.filter(function (i) { return i.status !== "vendido"; }).length;
@@ -895,7 +896,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     }
     var msg = sold ? t("waSold", { code: it.code, title: tr(it, "title") }) : t("waOffer", { code: it.code, title: tr(it, "title"), price: money(it.price) });
     acts.appendChild(waBtn(sold ? t("btnSold") : t("btnOffer"), waLink(msg)));
-    if (!sold) { acts.appendChild(h("button", { class: "btn watch", type: "button", id: "m-watch", hidden: true, onclick: function () { alOpen(it.code); } }, [icon("i-bell"), h("span")])); alPaint(true); }
+    if (!sold) { acts.appendChild(h("button", { class: "btn watch", type: "button", id: "m-watch", hidden: true, onclick: function () { alQuick(it.code); } }, [icon("i-bell"), h("span")])); alPaint(true); }
     showPhoto(0);
     // Show the item's own link (…/i/MV-90/) in the address bar: it's the link that previews nicely when shared.
     if (location.href !== itemUrl(it.code)) history.replaceState(null, "", itemUrl(it.code));
@@ -981,6 +982,26 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       return alPost(sub, s.push).then(function () { s.endpoint = sub.endpoint; alSave(s); });
     });
   }
+  // The bell, one tap: where this browser can show notifications (Chrome, Android, a computer, the iPhone Home Screen app),
+  // ask for permission right away and confirm with a toast. Otherwise (an iPhone browser tab, blocked notifications,
+  // or already following) open the sheet with the other options.
+  function alQuick(code) {
+    var s = alLoad(), on = s.push.all || s.tg.all || (code ? alWatching(code) : false);
+    if (on || !CAN_PUSH || !AL.cfg || Notification.permission === "denied") return alOpen(code);
+    alToast(t("alWorking"));
+    alPush(code, true).then(function () { alPaint(); alToast(code ? t("alQuick1", { code: code }) : t("alQuickAll"), 6000); })
+      .catch(function (err) { alToast(""); alOpen(code); alSheet(err && err.message === "denied" ? t("alDenied") : t("alFail")); });
+  }
+  var alToastEl = null, alToastT = 0;
+  function alToast(msg, ms) {
+    if (alToastEl) alToastEl.remove();
+    clearTimeout(alToastT); alToastEl = null;
+    if (!msg) return;
+    // Inside an open dialog (the item) so it sits above the backdrop.
+    alToastEl = h("div", { class: "al-toast", role: "status", text: msg });
+    (document.querySelector("dialog[open]") || document.body).appendChild(alToastEl);
+    if (ms) alToastT = setTimeout(function () { alToast(""); }, ms);
+  }
   var alDlg = document.getElementById("alerts"), alTarget = null;
   // On an iPhone tab, the address while the sheet is open is #avisar-<CODE|todo>: "Agregar a inicio" saves that address
   // (the manifest has no start_url), so the Home Screen icon opens straight on this alert, where notifications can be turned on.
@@ -1048,7 +1069,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     }
     if (!dialogOnly && items.length) render();
   }
-  document.getElementById("watch-all").addEventListener("click", function () { alOpen(null); });
+  document.getElementById("watch-all").addEventListener("click", function () { alQuick(null); });
   document.getElementById("al-close").addEventListener("click", function () { alDlg.close(); });
   alDlg.addEventListener("click", function (e) { if (e.target === alDlg) alDlg.close(); });
   fetch(CONFIG.alerts + "/config").then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
