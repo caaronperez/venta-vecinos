@@ -260,6 +260,8 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
 .al-note { margin: 0; font-size: 15px; background: var(--sage); border-radius: 10px; padding: 12px 14px; }
 .al-msg { margin: 0; font-weight: 600; color: var(--green); }
 .al-sub { margin: -4px 0 4px; font-size: 14px; color: var(--muted); }
+.al-h { margin: 4px 0 0; font-weight: 700; }
+.al-note ol { margin: 8px 0 0; padding-left: 22px; display: grid; gap: 6px; }
 
 @media (max-width: 980px) {
   .nav { display: none; }
@@ -489,14 +491,18 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       alKicker: "Avisos de rebaja", alItem: "Avisarme si baja de precio", alItemOn: "Te aviso si baja de precio ✓",
       alAll: "Avisarme de todas las rebajas", alAllOn: "Te aviso de todas las rebajas ✓",
       alTitle1: "Avisarme si baja de precio", alTitleAll: "Avisarme de las rebajas",
-      alLead1: "{code} · {title}, hoy en {price}. Te aviso en cuanto baje. Elige cómo:", alLeadAll: "Te aviso cada vez que algo baje de precio. Elige cómo:",
-      alPushOn: "Avisarme en este dispositivo", alPushOff: "Ya no avisarme en este dispositivo", alWorking: "Un momento…",
+      alLead1: "{code} · {title}, hoy en {price}. Solo te aviso de este artículo, en cuanto baje de precio.", alLeadAll: "Te aviso cada vez que algo de la venta baje de precio.",
+      alPushOn: "Activar notificaciones en este celular", alPushOff: "Desactivar notificaciones en este celular", alWorking: "Un momento…",
       alOn: "Listo ✓ Te llegará una notificación a este dispositivo.", alOff: "Listo, ya no te aviso en este dispositivo.",
       alFail: "No se pudo activar. Intenta de nuevo o usa otra opción.",
       alDenied: "Las notificaciones de esta página están bloqueadas. Actívalas en la configuración del navegador o usa otra opción.",
-      alIosH: "En iPhone:", alIos: "toca Compartir y luego «Agregar a inicio». Abre la venta desde ese ícono y vuelve a tocar la campana para recibir notificaciones.",
+      alIosH: "Notificaciones en iPhone (1 minuto)", alIosWhy: "Apple solo permite notificaciones si agregas la venta a tu pantalla de inicio:",
+      alIos0: "Si abriste el link desde WhatsApp o Instagram, ábrelo primero en Safari.",
+      alIos1: "Toca Compartir (en Safari puede estar dentro de «•••»; en Chrome está junto a la dirección).",
+      alIos2: "Elige «Agregar a inicio» y luego «Agregar».", alIos3: "Abre la venta desde el ícono nuevo en tu pantalla de inicio: se abre en este mismo aviso.",
+      alIos4: "Toca «Activar notificaciones» y luego «Permitir».",
       alNoPush: "Este navegador no permite notificaciones.",
-      alTg: "Avisarme por Telegram", alTgDone: "Ya lo pediste por Telegram ✓ Escribe /lista en el chat para verlo.",
+      alTg: "Avisarme por Telegram", alTgFast: "Lo más fácil en iPhone:", alTgNote: "Un chat privado con el bot: solo te escribe cuando lo que elegiste baje de precio. Para dejarlo, escribe /parar.", alTgDone: "Ya lo pediste por Telegram ✓ Escribe /lista en el chat para verlo.",
       alWa: "Seguir el canal de WhatsApp", alWaNote: "En el canal publico todas las rebajas."
     },
     en: {
@@ -532,14 +538,18 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       alKicker: "Price-drop alerts", alItem: "Tell me if the price drops", alItemOn: "I'll tell you if it drops ✓",
       alAll: "Tell me about every price drop", alAllOn: "You'll hear about every price drop ✓",
       alTitle1: "Tell me if the price drops", alTitleAll: "Tell me about price drops",
-      alLead1: "{code} · {title}, now {price}. I'll let you know as soon as it drops. Choose how:", alLeadAll: "I'll let you know every time something drops in price. Choose how:",
-      alPushOn: "Notify me on this device", alPushOff: "Stop notifying me on this device", alWorking: "One moment…",
+      alLead1: "{code} · {title}, now {price}. I'll only tell you about this item, as soon as its price drops.", alLeadAll: "I'll let you know every time something in the sale drops in price.",
+      alPushOn: "Turn on notifications on this phone", alPushOff: "Turn off notifications on this phone", alWorking: "One moment…",
       alOn: "Done ✓ You'll get a notification on this device.", alOff: "Done, no more notifications on this device.",
       alFail: "That didn't work. Try again or pick another option.",
       alDenied: "Notifications are blocked for this page. Turn them on in your browser settings or pick another option.",
-      alIosH: "On iPhone:", alIos: "tap Share, then “Add to Home Screen”. Open the sale from that icon and tap the bell again to get notifications.",
+      alIosH: "Notifications on iPhone (1 minute)", alIosWhy: "Apple only allows notifications once you add the sale to your Home Screen:",
+      alIos0: "If you opened the link from WhatsApp or Instagram, open it in Safari first.",
+      alIos1: "Tap Share (in Safari it may be inside “•••”; in Chrome it's next to the address).",
+      alIos2: "Choose “Add to Home Screen”, then “Add”.", alIos3: "Open the sale from the new icon on your Home Screen: it opens right on this alert.",
+      alIos4: "Tap “Turn on notifications”, then “Allow”.",
       alNoPush: "This browser doesn't support notifications.",
-      alTg: "Notify me on Telegram", alTgDone: "Already set up on Telegram ✓ Send /lista in the chat to see it.",
+      alTg: "Notify me on Telegram", alTgFast: "Easiest on iPhone:", alTgNote: "A private chat with the bot: it only writes when what you picked drops in price. To stop, send /parar.", alTgDone: "Already set up on Telegram ✓ Send /lista in the chat to see it.",
       alWa: "Follow the WhatsApp channel", alWaNote: "Every price drop is posted in the channel."
     }
   };
@@ -960,13 +970,39 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     });
   }
   var alDlg = document.getElementById("alerts"), alTarget = null;
-  function alOpen(code) { alTarget = code || null; alSheet(); if (!alDlg.open) alDlg.showModal(); }
+  // On an iPhone tab, the address while the sheet is open is #avisar-<CODE|todo>: "Agregar a inicio" saves that address
+  // (the manifest has no start_url), so the Home Screen icon opens straight on this alert, where notifications can be turned on.
+  var IOS_TAB = IOS && !STANDALONE;
+  function alOpen(code) {
+    alTarget = code || null; alSheet(); if (!alDlg.open) alDlg.showModal();
+    if (IOS_TAB) history.replaceState(null, "", PAGE + "#avisar-" + (alTarget || "todo"));
+  }
+  alDlg.addEventListener("close", function () {
+    if (IOS_TAB && /^#avisar-/.test(location.hash)) history.replaceState(null, "", current ? itemUrl(current.code) : PAGE);
+  });
+  var alAuto = /^#avisar-(MV-\d+|todo)$/.exec(location.hash);
+  function alAutoOpen() {
+    if (!alAuto || !AL.cfg || !items.length) return;
+    var c = alAuto[1] === "todo" ? null : alAuto[1]; alAuto = null;
+    if (c) open(c); else history.replaceState(null, "", PAGE);
+    alOpen(c);
+  }
   function alSheet(msg) {
     var it = alTarget ? items.filter(function (x) { return x.code === alTarget; })[0] : null, s = alLoad();
     document.getElementById("al-title").textContent = it ? t("alTitle1") : t("alTitleAll");
     document.getElementById("al-lead").textContent = it ? t("alLead1", { code: it.code, title: tr(it, "title"), price: money(it.price) }) : t("alLeadAll");
     var box = document.getElementById("al-opts"), on = alHas(s.push, alTarget);
     box.replaceChildren();
+    var tg = AL.cfg && /^[A-Za-z0-9_]{5,32}$/.test(AL.cfg.telegramBot || "");
+    function addTelegram() {
+      if (!tg) return;
+      if (IOS_TAB) box.appendChild(h("p", { class: "al-h", text: t("alTgFast") }));
+      box.appendChild(h("a", { class: "btn tg", href: "https://t.me/" + AL.cfg.telegramBot + "?start=" + CONFIG.alertSite + "_" + (alTarget || "all"), target: "_blank", rel: "noopener",
+        onclick: function () { var s2 = alLoad(); if (alTarget) { if (s2.tg.codes.indexOf(alTarget) < 0) s2.tg.codes.push(alTarget); } else s2.tg.all = true; alSave(s2); alPaint(); setTimeout(function () { alSheet(); }, 400); } },
+        [icon("i-tg"), h("span", { text: t("alTg") })]));
+      box.appendChild(h("p", { class: "al-sub", text: alHas(s.tg, alTarget) ? t("alTgDone") : t("alTgNote") }));
+    }
+    if (IOS_TAB) addTelegram();
     if (CAN_PUSH && Notification.permission === "denied") box.appendChild(h("p", { class: "al-note", text: t("alDenied") }));
     else if (CAN_PUSH) {
       box.appendChild(h("button", { class: "btn watch" + (on ? " on" : ""), type: "button", onclick: function (e) {
@@ -974,14 +1010,11 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
         alPush(alTarget, !on).then(function () { alPaint(); alSheet(on ? t("alOff") : t("alOn")); })
           .catch(function (err) { alSheet(err && err.message === "denied" ? t("alDenied") : t("alFail")); });
       } }, [icon("i-bell"), h("span", { text: on ? t("alPushOff") : t("alPushOn") })]));
-    } else if (IOS) box.appendChild(h("p", { class: "al-note" }, [h("b", { text: t("alIosH") }), " " + t("alIos")]));
-    else box.appendChild(h("p", { class: "al-note", text: t("alNoPush") }));
-    if (AL.cfg && /^[A-Za-z0-9_]{5,32}$/.test(AL.cfg.telegramBot || "")) {
-      box.appendChild(h("a", { class: "btn tg", href: "https://t.me/" + AL.cfg.telegramBot + "?start=" + CONFIG.alertSite + "_" + (alTarget || "all"), target: "_blank", rel: "noopener",
-        onclick: function () { var s2 = alLoad(); if (alTarget) { if (s2.tg.codes.indexOf(alTarget) < 0) s2.tg.codes.push(alTarget); } else s2.tg.all = true; alSave(s2); alPaint(); setTimeout(function () { alSheet(); }, 400); } },
-        [icon("i-tg"), h("span", { text: t("alTg") })]));
-      if (alHas(s.tg, alTarget)) box.appendChild(h("p", { class: "al-sub", text: t("alTgDone") }));
-    }
+    } else if (IOS) {
+      box.appendChild(h("div", { class: "al-note" }, [h("b", { text: t("alIosH") }), h("br"), t("alIosWhy"),
+        h("ol", null, ["alIos0", "alIos1", "alIos2", "alIos3", "alIos4"].map(function (k) { return h("li", { text: t(k) }); }))]));
+    } else box.appendChild(h("p", { class: "al-note", text: t("alNoPush") }));
+    if (!IOS_TAB) addTelegram();
     if (AL.cfg && safeUrl(AL.cfg.whatsappChannel)) {
       box.appendChild(h("a", { class: "btn wa", href: safeUrl(AL.cfg.whatsappChannel), target: "_blank", rel: "noopener" },
         [h("img", { class: "walogo", src: ROOT + "brand/whatsapp-glyph-white.svg", alt: "" }), h("span", { text: t("alWa") })]));
@@ -1008,7 +1041,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
   alDlg.addEventListener("click", function (e) { if (e.target === alDlg) alDlg.close(); });
   fetch(CONFIG.alerts + "/config").then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
     if (!c || !c.vapidPublicKey) return;
-    AL.cfg = c; alPaint();
+    AL.cfg = c; alPaint(); alAutoOpen();
     // If the browser renewed this device's subscription, tell the server the new address.
     var s = alLoad();
     if (CAN_PUSH && Notification.permission === "granted" && (s.push.all || s.push.codes.length)) {
@@ -1024,6 +1057,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
     items.sort(function (a, b) { return (Number(b.featured) || 0) - (Number(a.featured) || 0) || (a.status === "vendido") - (b.status === "vendido") || (Number(b.price) || 0) - (Number(a.price) || 0) || String(a.code).localeCompare(String(b.code)); });
     buildNav(); render();
     var c = location.hash.slice(1); if (/^MV/.test(c)) open(c);
+    alAutoOpen();
   }).catch(function () { buildNav(); render(); });
 })();
 </script>
