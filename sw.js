@@ -5,7 +5,9 @@ self.addEventListener("push", function (e) {
   var d = {};
   try { d = e.data ? e.data.json() : {}; } catch (_) { d = { body: e.data ? e.data.text() : "" }; }
   var scope = self.registration.scope;
-  var url = typeof d.url === "string" && d.url.indexOf("https://caaronperez.github.io/") === 0 ? d.url : scope;
+  // The server sends GitHub Pages links; open the same page on whichever address this was installed from (GitHub or the Cloudflare mirror).
+  var m = typeof d.url === "string" ? /^https:\/\/caaronperez\.github\.io\/venta-(mudanza|vecinos)\//.exec(d.url) : null;
+  var url = m ? scope + d.url.slice(m[0].length) : scope;
   e.waitUntil(self.registration.showNotification(d.title || "Bajó de precio", {
     body: d.body || "",
     icon: scope + "brand/icon-192.png",
