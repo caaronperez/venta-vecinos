@@ -111,21 +111,30 @@ svg.i { width: 26px; height: 26px; flex: none; fill: none; stroke: currentColor;
 
 /* Grid */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; padding: 18px 0 8px; }
-.card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; padding: 0; text-align: left; cursor: pointer; display: grid; grid-template-rows: auto 1fr; transition: transform .18s ease, box-shadow .18s ease; }
-.card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -24px rgba(20,37,27,.55); }
+.cell { position: relative; display: grid; transition: transform .18s ease; }
+.cell:hover { transform: translateY(-3px); }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; padding: 0; text-align: left; cursor: pointer; display: grid; grid-template-rows: auto 1fr; transition: box-shadow .18s ease; }
+.cell:hover .card { box-shadow: 0 18px 36px -24px rgba(20,37,27,.55); }
+/* Price-drop bell over the photo (a sibling of the card button, since buttons can't nest). */
+.bell { position: absolute; right: 12px; top: 12px; width: 46px; height: 46px; border: 0; border-radius: 999px; background: rgba(255,255,255,.94); color: var(--green); display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 16px -6px rgba(0,0,0,.45); }
+.bell svg.i { width: 24px; height: 24px; stroke-width: 2; }
+.bell.on { background: var(--green); color: var(--paper); }
+.bell:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
 .card:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
 .card .ph { position: relative; aspect-ratio: 4 / 3.3; background: var(--sage); }
 .card .ph img { width: 100%; height: 100%; object-fit: cover; }
 .noimg { width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
 .badge { position: absolute; left: 12px; top: 12px; font-weight: 700; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 6px; background: var(--green); color: var(--paper); }
 .badge.sold { background: var(--sold); }
-.msi-tag { position: absolute; right: 12px; bottom: 12px; background: var(--lime); color: var(--ink); font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 999px; }
+.msi-tag { position: absolute; right: 12px; bottom: 12px; display: flex; align-items: center; gap: 8px; background: #fff; color: #0a0080; font: 800 17px/1 var(--sans); padding: 7px 13px 7px 10px; border-radius: 999px; box-shadow: 0 6px 16px -6px rgba(0,0,0,.45); }
+.card .ph .msi-tag img { height: 24px; width: auto; display: block; object-fit: contain; }
 .card.is-sold .ph img { filter: grayscale(1); opacity: .55; }
 .card .meta { padding: 14px 16px 16px; display: grid; gap: 3px; align-content: start; }
 .code { font-size: 13px; color: var(--muted); letter-spacing: .02em; }
 .card h3 { margin: 0; font: 600 21px/1.15 var(--serif); text-wrap: balance; }
 .card .price { font: 700 22px/1.2 var(--serif); margin-top: 4px; font-variant-numeric: lining-nums tabular-nums; }
 .card .sub { font-size: 14px; color: var(--muted); }
+.card .sub b { color: #0a0080; font-weight: 700; }
 .orig { font-size: 14px; color: var(--muted); }
 .was { font-size: 14px; color: #B3261E; font-weight: 600; }
 .was s { color: var(--muted); font-weight: 400; }
@@ -475,7 +484,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       daysLeft: "Hasta el 13 de diciembre · quedan {n} días", lastDay: "Último día", lastItems: "Últimos artículos",
       waEmpty: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes…?", waFoot: "Hola, vivo en BeGrand y vi tu venta de mudanza.",
       sold: "Vendido", held: "Apartado", offer: "Oferta en proceso", offerNote: "Hay una oferta en proceso. Si no se concreta, se vuelve a habilitar el pago.", deal: "Rebajado", soon: "Foto pronto", msiTag: "3 MSI",
-      orMsi: "o 3 MSI de {amt} con Mercado Pago", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
+      orMsi: "o 3 MSI de {amt} con Mercado Pago", orMsiA: "o ", orMsiB: "3 MSI de {amt}", orMsiC: " con Mercado Pago", cashAt: "Efectivo al recoger: {amt}", was: "Rebajado ", orig: "Precio original: ",
       results1: "1 resultado", resultsN: "{n} resultados", avail: "{a} disponibles de {n} artículos",
       noMatch: "Nada coincide con “{q}”{cat}. ", inCat: " en {c}", askWa: "Pregúntame por WhatsApp", waAsk: "Hola, vivo en BeGrand y vi tu venta de mudanza. ¿Tienes {q}?",
       photo: "{t} · foto {i} de {n}", zoom: "Ampliar", prev: "Foto anterior", next: "Foto siguiente", seePhoto: "Ver foto {i}",
@@ -522,7 +531,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       daysLeft: "Until December 13 · {n} days left", lastDay: "Last day", lastItems: "Last items",
       waEmpty: "Hi, I saw your moving sale. Do you have…?", waFoot: "Hi, I saw your moving sale.",
       sold: "Sold", held: "On hold", offer: "Offer pending", offerNote: "An offer is in progress. If it falls through, payment opens again.", deal: "Reduced", soon: "Photo soon", msiTag: "3 MSI",
-      orMsi: "or 3 interest-free payments of {amt} with Mercado Pago", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
+      orMsi: "or 3 interest-free payments of {amt} with Mercado Pago", orMsiA: "or ", orMsiB: "3 interest-free payments of {amt}", orMsiC: " with Mercado Pago", cashAt: "Cash at pickup: {amt}", was: "Reduced ", orig: "Original price: ",
       results1: "1 result", resultsN: "{n} results", avail: "{a} available of {n} items",
       noMatch: "Nothing matches “{q}”{cat}. ", inCat: " in {c}", askWa: "Ask me on WhatsApp", waAsk: "Hi, I saw your moving sale. Do you have {q}?",
       photo: "{t} · photo {i} of {n}", zoom: "Zoom", prev: "Previous photo", next: "Next photo", seePhoto: "See photo {i}",
@@ -696,7 +705,7 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
       var ph = h("div", { class: "ph" }, [
         pic ? h("img", { src: pic, alt: tr(it, "title"), loading: "lazy" }) : h("div", { class: "noimg", text: t("soon") }),
         sold ? h("span", { class: "badge sold", text: t("sold") }) : held ? h("span", { class: "badge", text: heldLabel(it) }) : wasLine(it) ? h("span", { class: "badge deal", text: t("deal") }) : null,
-        sold || useBbva ? null : h("span", { class: "msi-tag", text: t("msiTag") })
+        sold || useBbva ? null : h("span", { class: "msi-tag" }, [h("img", { src: ROOT + "brand/mp-logo.svg", alt: "Mercado Pago" }), h("span", { text: t("msiTag") })])
       ]);
       var meta = h("div", { class: "meta" }, [
         h("span", { class: "code" }, [it.code, alWatching(it.code) ? icon("i-bell", "wmark") : null]),
@@ -707,14 +716,17 @@ dialog.alerts { width: min(480px, calc(100vw - 24px)); }
           var pl = planOf(it);
           if (sold) return h("div", { class: "sub", text: t("sold") });
           if (useBbva) return null;
-          if (!pl.length) return h("div", { class: "sub", text: t("orMsi", { amt: money(it.price / 3) }) });
+          if (!pl.length) return h("div", { class: "sub" }, [t("orMsiA"), h("b", { text: t("orMsiB", { amt: money(it.price / 3) }) }), t("orMsiC")]);
           var st = planLeft(pl);
           return h("div", { class: "left", text: st.left === 0 ? t("allPaid") : st.left === 1 ? t("cardLeft1") : t("cardLeft", { left: st.left }) });
         })(),
         sold ? null : h("div", { class: "cash", text: t("cashAt", { amt: money(cashPrice(it)) }) }),
         origLine(it)
       ]);
-      grid.appendChild(h("button", { class: "card" + (sold ? " is-sold" : ""), type: "button", "aria-label": it.code + ", " + tr(it, "title") + ", " + money(it.price), onclick: function () { open(it.code); } }, [ph, meta]));
+      var watching = AL && AL.cfg && (alWatching(it.code) || alLoad().push.all || alLoad().tg.all);
+      var bell = sold || !(AL && AL.cfg) ? null : h("button", { class: "bell" + (watching ? " on" : ""), type: "button", "aria-pressed": String(!!watching),
+        "aria-label": t(watching ? "alItemOn" : "alItem") + " · " + it.code, title: t(watching ? "alItemOn" : "alItem"), onclick: function () { alOpen(it.code); } }, [icon("i-bell")]);
+      grid.appendChild(h("div", { class: "cell" }, [h("button", { class: "card" + (sold ? " is-sold" : ""), type: "button", "aria-label": it.code + ", " + tr(it, "title") + ", " + money(it.price), onclick: function () { open(it.code); } }, [ph, meta]), bell]));
     });
     var avail = items.filter(function (i) { return i.status !== "vendido"; }).length;
     var nr = document.getElementById("noresults");
