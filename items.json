@@ -1281,6 +1281,32 @@
   "lockPay": true
  },
  {
+  "code": "MV-31",
+  "title": "Aparador negro acanalado Merax 121 cm",
+  "price": 2930,
+  "originalPrice": 0,
+  "cashPrice": 2930,
+  "delivery": 0,
+  "category": "Muebles",
+  "condition": "Con detalles de uso",
+  "size": "121 x 42 x 76 cm",
+  "brand": "Merax",
+  "description": "Aparador/buffet marca Merax en negro con frente curvo acanalado y estantes ajustables, de 121 x 42 x 76 cm. A considerar: tiene detalles en la pintura y pequeños raspones en las puntas de las patas. Muy buen espacio de guardado para comedor o sala.",
+  "photos": [
+   "images/mv-31-1.jpg"
+  ],
+  "status": "oferta",
+  "links": {
+   "pickup": "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=77839444-b859563a-a203-463d-b6b1-96b675b060aa"
+  },
+  "en": {
+   "title": "Merax black fluted sideboard, 121 cm",
+   "description": "Black Merax sideboard/buffet with a curved fluted front and adjustable shelves, 121 x 42 x 76 cm. Note: some paint marks and small scuffs on the leg tips. Lots of storage for a dining or living room.",
+   "size": "121 x 42 x 76 cm"
+  },
+  "lockPay": true
+ },
+ {
   "code": "MV-38",
   "title": "Freidora de aire Instant Vortex 6 qt (5.7 L)",
   "price": 630,
